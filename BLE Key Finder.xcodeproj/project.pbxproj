@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C3365AF95527D46A1F124C2B /* Pods_BLE_Key_FinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50EA574EF0BF3FE51F4D44B /* Pods_BLE_Key_FinderTests.framework */; };
 		E752704121C2264D002DE144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752704021C2264D002DE144 /* AppDelegate.swift */; };
-		E752704321C2264D002DE144 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752704221C2264D002DE144 /* ViewController.swift */; };
+		E752704321C2264D002DE144 /* KeyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752704221C2264D002DE144 /* KeyDetailViewController.swift */; };
 		E752704621C2264D002DE144 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E752704421C2264D002DE144 /* Main.storyboard */; };
 		E752704821C2264F002DE144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E752704721C2264F002DE144 /* Assets.xcassets */; };
 		E752704B21C2264F002DE144 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E752704921C2264F002DE144 /* LaunchScreen.storyboard */; };
@@ -21,8 +21,12 @@
 		E752707721C22A85002DE144 /* UIViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752707621C22A85002DE144 /* UIViewController+Extras.swift */; };
 		E752707921C22AB8002DE144 /* UITableView+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752707821C22AB8002DE144 /* UITableView+Extras.swift */; };
 		E752707D21C22ED2002DE144 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E752707C21C22ED2002DE144 /* Login.storyboard */; };
+		E781E62321C8AFCB00638293 /* KeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781E62221C8AFCB00638293 /* KeyCell.swift */; };
+		E781E62521C8BEB700638293 /* AddKeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781E62421C8BEB700638293 /* AddKeyCell.swift */; };
 		E7EAC06D21C4BFCB0072822B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAC06C21C4BFCB0072822B /* LoginViewController.swift */; };
 		E7EAC06F21C4C3400072822B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAC06E21C4C3400072822B /* Color.swift */; };
+		E7EB1D2921C8349C007A5811 /* AddKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB1D2821C8349C007A5811 /* AddKeyViewController.swift */; };
+		E7EB1D2B21C834E2007A5811 /* KeysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB1D2A21C834E2007A5811 /* KeysViewController.swift */; };
 		F76779C500031CE8A6861B41 /* Pods_BLE_Key_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC30AD968E0ECAC87CACAF8 /* Pods_BLE_Key_Finder.framework */; };
 		FF6B629AB658609CD42A44D3 /* Pods_BLE_Key_FinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA31142A60224AC7FE045663 /* Pods_BLE_Key_FinderUITests.framework */; };
 /* End PBXBuildFile section */
@@ -56,7 +60,7 @@
 		E50EA574EF0BF3FE51F4D44B /* Pods_BLE_Key_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E752703D21C2264D002DE144 /* BLE Key Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BLE Key Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E752704021C2264D002DE144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E752704221C2264D002DE144 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E752704221C2264D002DE144 /* KeyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailViewController.swift; sourceTree = "<group>"; };
 		E752704521C2264D002DE144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E752704721C2264F002DE144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E752704A21C2264F002DE144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,8 +77,12 @@
 		E752707621C22A85002DE144 /* UIViewController+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extras.swift"; sourceTree = "<group>"; };
 		E752707821C22AB8002DE144 /* UITableView+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extras.swift"; sourceTree = "<group>"; };
 		E752707C21C22ED2002DE144 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		E781E62221C8AFCB00638293 /* KeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCell.swift; sourceTree = "<group>"; };
+		E781E62421C8BEB700638293 /* AddKeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeyCell.swift; sourceTree = "<group>"; };
 		E7EAC06C21C4BFCB0072822B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E7EAC06E21C4C3400072822B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E7EB1D2821C8349C007A5811 /* AddKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeyViewController.swift; sourceTree = "<group>"; };
+		E7EB1D2A21C834E2007A5811 /* KeysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,9 +193,12 @@
 		E752706E21C2272A002DE144 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E781E61F21C8AF8400638293 /* Cells */,
 				E752707B21C22C44002DE144 /* Login */,
 				E752704421C2264D002DE144 /* Main.storyboard */,
-				E752704221C2264D002DE144 /* ViewController.swift */,
+				E752704221C2264D002DE144 /* KeyDetailViewController.swift */,
+				E7EB1D2821C8349C007A5811 /* AddKeyViewController.swift */,
+				E7EB1D2A21C834E2007A5811 /* KeysViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -219,6 +230,15 @@
 				E7EAC06C21C4BFCB0072822B /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		E781E61F21C8AF8400638293 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E781E62221C8AFCB00638293 /* KeyCell.swift */,
+				E781E62421C8BEB700638293 /* AddKeyCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,13 +433,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E752704321C2264D002DE144 /* ViewController.swift in Sources */,
+				E752704321C2264D002DE144 /* KeyDetailViewController.swift in Sources */,
+				E7EB1D2B21C834E2007A5811 /* KeysViewController.swift in Sources */,
 				E752707721C22A85002DE144 /* UIViewController+Extras.swift in Sources */,
 				E752704121C2264D002DE144 /* AppDelegate.swift in Sources */,
+				E781E62521C8BEB700638293 /* AddKeyCell.swift in Sources */,
 				E752707521C22A64002DE144 /* Optional+Extras.swift in Sources */,
+				E7EB1D2921C8349C007A5811 /* AddKeyViewController.swift in Sources */,
 				E7EAC06D21C4BFCB0072822B /* LoginViewController.swift in Sources */,
 				E752707921C22AB8002DE144 /* UITableView+Extras.swift in Sources */,
 				E752707021C227D7002DE144 /* Log.swift in Sources */,
+				E781E62321C8AFCB00638293 /* KeyCell.swift in Sources */,
 				E752707221C229DC002DE144 /* Constants.swift in Sources */,
 				E7EAC06F21C4C3400072822B /* Color.swift in Sources */,
 			);
