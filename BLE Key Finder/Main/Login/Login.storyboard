@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYJ-WL-e8c">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYJ-WL-e8c">
                                 <rect key="frame" x="40" y="369" width="295" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="vfF-C3-TAi"/>
@@ -26,7 +26,7 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="tel"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVz-gy-PLt">
                                 <rect key="frame" x="40" y="431" width="295" height="42"/>
@@ -76,6 +76,8 @@
                         <viewLayoutGuide key="safeArea" id="geQ-46-MFO"/>
                     </view>
                     <connections>
+                        <outlet property="passwordField" destination="yVz-gy-PLt" id="DGN-GY-e76"/>
+                        <outlet property="phoneField" destination="bYJ-WL-e8c" id="Ad1-pj-F2x"/>
                         <outlet property="signInButton" destination="Bff-nx-mO4" id="ouh-np-uRg"/>
                         <outlet property="topAnchorConstraint" destination="X9f-HM-72B" id="E3b-io-McE"/>
                     </connections>

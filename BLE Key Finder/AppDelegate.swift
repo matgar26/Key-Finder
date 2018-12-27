@@ -7,15 +7,21 @@
 //
 
 import UIKit
+import KeychainAccess
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    let keychain = Keychain(service: Constants.Keys.service)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        if let _ = keychain[Constants.Keys.authToken], let _ = keychain[Constants.Keys.hubId] {
+            showMainApplication()
+        } else {
+            showLogin()
+        }
         return true
     }
 
@@ -40,7 +46,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    // Base Window
+    func showLogin(){
+        let loginStoryboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+        if let viewController = loginStoryboard.instantiateInitialViewController() {
+            makeRootViewController(vc: viewController)
+        }
+    }
+    
+    func showMainApplication(){
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = mainStoryboard.instantiateInitialViewController() {
+            makeRootViewController(vc: viewController)
+        }
+    }
+    
+    func makeRootViewController(vc: UIViewController) {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        window?.rootViewController = vc
+    }
+    
+    func logout() {
+        do{
+            try keychain.remove(Constants.Keys.authToken)
+            try keychain.remove(Constants.Keys.hubId)
+            Log.authentication.message("Successfully logged out")
+        }catch{
+            Log.authentication.error(error)
+        }
+        showLogin()
+    }
 
 }
 

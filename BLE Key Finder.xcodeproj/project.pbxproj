@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C3365AF95527D46A1F124C2B /* Pods_BLE_Key_FinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50EA574EF0BF3FE51F4D44B /* Pods_BLE_Key_FinderTests.framework */; };
+		E747713A21D1BC2200B117E0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747713921D1BC2200B117E0 /* APIManager.swift */; };
+		E747713C21D1C10C00B117E0 /* LoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747713B21D1C10C00B117E0 /* LoginOperation.swift */; };
+		E747713F21D1C1BD00B117E0 /* AuthenticationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747713E21D1C1BD00B117E0 /* AuthenticationInfo.swift */; };
+		E747714121D3033900B117E0 /* AlertDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747714021D3033900B117E0 /* AlertDisplay.swift */; };
 		E752704121C2264D002DE144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752704021C2264D002DE144 /* AppDelegate.swift */; };
 		E752704321C2264D002DE144 /* KeyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752704221C2264D002DE144 /* KeyDetailViewController.swift */; };
 		E752704621C2264D002DE144 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E752704421C2264D002DE144 /* Main.storyboard */; };
@@ -58,6 +62,10 @@
 		B5FD591D065F6EC9EC9E36E9 /* Pods-BLE Key FinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key FinderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Key FinderUITests/Pods-BLE Key FinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE54D6A0813D4ECC05B0F0FC /* Pods-BLE Key Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key Finder.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder.release.xcconfig"; sourceTree = "<group>"; };
 		E50EA574EF0BF3FE51F4D44B /* Pods_BLE_Key_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E747713921D1BC2200B117E0 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		E747713B21D1C10C00B117E0 /* LoginOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOperation.swift; sourceTree = "<group>"; };
+		E747713E21D1C1BD00B117E0 /* AuthenticationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationInfo.swift; sourceTree = "<group>"; };
+		E747714021D3033900B117E0 /* AlertDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplay.swift; sourceTree = "<group>"; };
 		E752703D21C2264D002DE144 /* BLE Key Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BLE Key Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E752704021C2264D002DE144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E752704221C2264D002DE144 /* KeyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +144,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E747713821D1BC0400B117E0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E747713921D1BC2200B117E0 /* APIManager.swift */,
+				E747713B21D1C10C00B117E0 /* LoginOperation.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E747713D21D1C12A00B117E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E747713E21D1C1BD00B117E0 /* AuthenticationInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E752703421C2264D002DE144 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +190,8 @@
 				E752704021C2264D002DE144 /* AppDelegate.swift */,
 				E752704721C2264F002DE144 /* Assets.xcassets */,
 				E752704921C2264F002DE144 /* LaunchScreen.storyboard */,
+				E747713821D1BC0400B117E0 /* Networking */,
+				E747713D21D1C12A00B117E0 /* Models */,
 				E752707A21C22C2B002DE144 /* Shared */,
 				E752707321C22A50002DE144 /* Extensions */,
 				E752706E21C2272A002DE144 /* Main */,
@@ -219,6 +246,7 @@
 				E752706F21C227D7002DE144 /* Log.swift */,
 				E752707121C229DC002DE144 /* Constants.swift */,
 				E7EAC06E21C4C3400072822B /* Color.swift */,
+				E747714021D3033900B117E0 /* AlertDisplay.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -252,6 +280,7 @@
 				E752703921C2264D002DE144 /* Sources */,
 				E752703A21C2264D002DE144 /* Frameworks */,
 				E752703B21C2264D002DE144 /* Resources */,
+				8325880BCEBE34AD34224682 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -390,6 +419,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8325880BCEBE34AD34224682 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/PSOperations/PSOperations.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PSOperations.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		88E1015F89465D332A070B59 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,15 +488,19 @@
 				E7EB1D2B21C834E2007A5811 /* KeysViewController.swift in Sources */,
 				E752707721C22A85002DE144 /* UIViewController+Extras.swift in Sources */,
 				E752704121C2264D002DE144 /* AppDelegate.swift in Sources */,
+				E747714121D3033900B117E0 /* AlertDisplay.swift in Sources */,
 				E781E62521C8BEB700638293 /* AddKeyCell.swift in Sources */,
 				E752707521C22A64002DE144 /* Optional+Extras.swift in Sources */,
+				E747713A21D1BC2200B117E0 /* APIManager.swift in Sources */,
 				E7EB1D2921C8349C007A5811 /* AddKeyViewController.swift in Sources */,
 				E7EAC06D21C4BFCB0072822B /* LoginViewController.swift in Sources */,
 				E752707921C22AB8002DE144 /* UITableView+Extras.swift in Sources */,
 				E752707021C227D7002DE144 /* Log.swift in Sources */,
 				E781E62321C8AFCB00638293 /* KeyCell.swift in Sources */,
 				E752707221C229DC002DE144 /* Constants.swift in Sources */,
+				E747713C21D1C10C00B117E0 /* LoginOperation.swift in Sources */,
 				E7EAC06F21C4C3400072822B /* Color.swift in Sources */,
+				E747713F21D1C1BD00B117E0 /* AuthenticationInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

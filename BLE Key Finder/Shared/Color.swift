@@ -29,56 +29,18 @@ struct Color {
     
     // MARK: Grays
     
-    /// Lightest gray.
-    ///
-    /// Used in form cells, input bars, bar backgrounds,
-    /// section headers, login fields.
-    ///
-    /// `FAFAFA`
     static let lightBackground = UIColor(hexString: "FAFAFA")
     
-    /// Light gray (slightly darker than `lightBackground`).
-    ///
-    /// Used in table cell separators, borders and separator lines
-    /// in views who typically have a `lightBackground`.
-    ///
-    /// `D9D9D9`
     static let lightTrim = UIColor(hexString: "D9D9D9")
     
-    /// Medium-light gray (slightly lighter than `inactive`).
-    ///
-    /// Used by seprators in form sections.
-    ///
-    /// `C7C7C7`
     static let mediumTrim = UIColor(hexString: "C7C7C7")
     
-    /// Medium gray.
-    ///
-    /// Used by message bar icons in their normal states,
-    /// text field placeholders
-    ///
-    /// `AEAEAE`
     static let inactive = UIColor(hexString: "AEAEAE")
     
-    /// `inactive` with alpha `0.4`
-    ///
-    /// Used by message bar icons in their disabled states.
-    ///
     static let disabled = Color.inactive.withAlphaComponent(0.4)
     
-    /// Dark gray (darker than `lightTrim`).
-    ///
-    /// Used in borders and separator lines in views
-    /// who typically have a `lightBackground`.
-    ///
-    /// `9B9B9B`
     static let darkTrim = UIColor(hexString: "9B9B9B")
     
-    /// Off-black, very dark gray (darker than `darkTrim`).
-    ///
-    /// Used in labels where the text almost looks black.
-    ///
-    /// `444444`
     static let offBlack = UIColor(hexString: "444444")
     
     // MARK: - Search Bars

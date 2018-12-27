@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import KeychainAccess
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var phoneField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var topAnchorConstraint: NSLayoutConstraint!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +43,40 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInTapped(_ sender: Any) {
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = mainStoryboard.instantiateInitialViewController()
-        UIApplication.shared.keyWindow?.rootViewController = viewController
+        if fieldsAreValid() {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = mainStoryboard.instantiateInitialViewController()
+            UIApplication.shared.keyWindow?.rootViewController = viewController
+        } else {
+            AlertDisplay.showAlert(parent: self, title: "Complete All Fields", message: "Please complete all fields before continuing.")
+        }
+    }
+    
+    private func fieldsAreValid() -> Bool {
+        if !phoneField.text.isNilOrEmpty && !passwordField.text.isNilOrEmpty {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func signIn() {
+        if let phoneInt = Int(phoneField.text ?? "") {
+            let operation = LoginOperation(userNumber: phoneInt, completion: { (authInfo, error, status) in
+                if let e = error {
+                    AlertDisplay.showAlert(parent: self, title: "Login Failed", message: "The phone number provided does not have access to this information.")
+                    Log.authentication.message(e)
+                } else if let auth = authInfo, let key = auth.key, let id = auth.hubId {
+                    Log.authentication.message("Successfully logged In")
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.keychain[Constants.Keys.authToken] = key
+                    appDelegate.keychain[Constants.Keys.hubId] = id
+                    
+                    appDelegate.showMainApplication()
+                }
+            })
+            operationQueue.addOperation(operation)
+        }
     }
     
     // MARK: - Keyboard
@@ -68,7 +101,6 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-
     // MARK: - Navigation
 
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

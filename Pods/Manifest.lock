@@ -1,3 +1,24 @@
-PODFILE CHECKSUM: 4376f98655088caa6be5fb1c9ab4fda800e92d0c
+PODS:
+  - Alamofire (5.0.0.beta.1)
+  - KeychainAccess (3.1.2)
+  - PSOperations/Core (4.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.0.0.beta.1)
+  - KeychainAccess
+  - PSOperations/Core
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - KeychainAccess
+    - PSOperations
+
+SPEC CHECKSUMS:
+  Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
+  KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
+  PSOperations: c61e49d2b456b82986174bca82fd7b4716dce372
+
+PODFILE CHECKSUM: 316033509be22bfb236b3eedb715dfbdc3d0729e
 
 COCOAPODS: 1.5.2
