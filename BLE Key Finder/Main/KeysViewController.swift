@@ -20,9 +20,8 @@ class KeysViewController: UIViewController {
     }
     
     @IBAction func logoutTapped(_ sender: Any) {
-        let loginStoryboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
-        let viewController = loginStoryboard.instantiateInitialViewController()
-        UIApplication.shared.keyWindow?.rootViewController = viewController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.logout()
     }
     
 }
