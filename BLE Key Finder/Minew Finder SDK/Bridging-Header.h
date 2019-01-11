@@ -8,3 +8,5 @@
 #import "MinewDevice.h"
 #import "MinewDeviceManager.h"
 #import "MinewDeviceValue.h"
+#import "DeviceTag.h"
+#import "DeviceTagManager.h"

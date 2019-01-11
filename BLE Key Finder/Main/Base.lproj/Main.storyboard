@@ -204,6 +204,9 @@
                                                     <state key="normal" title="Ring" image="volumeIcon">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="ringTapped:" destination="9BW-El-uPw" eventType="touchUpInside" id="jFN-zC-96G"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -222,6 +225,10 @@
                             <outlet property="delegate" destination="9BW-El-uPw" id="Vsi-wu-KMX"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="distanceLabel" destination="XT8-xX-ZWl" id="lmV-VJ-P4k"/>
+                        <outlet property="macAddressLabel" destination="oMD-1u-J23" id="dZE-Gt-K8v"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHw-jQ-tL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
