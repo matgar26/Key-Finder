@@ -25,6 +25,7 @@ class KeysViewController: UIViewController {
         tableView.dataSource = self
         
         manager = DeviceTagManager.sharedInstance()
+        manager?.delegate = self
         
         refreshConnectedDevices()
     }
@@ -45,6 +46,12 @@ class KeysViewController: UIViewController {
     }
 }
 
+extension KeysViewController: DeviceTagManagerDelegate {
+    func didManagerUpdateBindTags(_ tags: [DeviceTag]!) {
+        refreshConnectedDevices()
+    }
+}
+
 extension KeysViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - Table Data Source
     
@@ -56,7 +63,8 @@ extension KeysViewController: UITableViewDelegate, UITableViewDataSource {
         if let device = bindedTags[indexPath.row] as? DeviceTag {
             let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
             cell.textLabel?.text = device.device.stringValueFor(.macAddress)
-            cell.detailTextLabel?.text = "Distance: \(device.device.distance ?? "Not Found")"
+            cell.detailTextLabel?.text = "Distance: \(device.distanceInFeet ?? "Not Found")"
+//            cell.detailTextLabel?.text = device.rssiDistance
             
             return cell
         }

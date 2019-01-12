@@ -64,7 +64,14 @@ extension DeviceTag {
         if !isConnected() {
             return "Disconnected"
         }
-        
-        return "unknown"
+        return "Unknown"
+    }
+    
+    var distanceInFeet: String? {
+        if let distance = device.getValue(.distance)?.floatValue {
+            let feet = distance * 3.2808
+            return "\(feet)ft"
+        }
+        return nil
     }
 }
