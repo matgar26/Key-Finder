@@ -14,7 +14,7 @@ class KeysViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    private var bindedDevices: NSMutableArray = []
+    private var bindedTags: NSMutableArray = []
     private var edit = false
     private var manager: DeviceTagManager?
     
@@ -25,7 +25,6 @@ class KeysViewController: UIViewController {
         tableView.dataSource = self
         
         manager = DeviceTagManager.sharedInstance()
-        manager?.delegate = self
         
         refreshConnectedDevices()
     }
@@ -41,28 +40,20 @@ class KeysViewController: UIViewController {
     }
     
     private func refreshConnectedDevices() {
-        bindedDevices = manager?.bindTags ?? []
+        bindedTags = manager?.bindTags ?? []
         tableView.reloadData()
     }
-    
-}
-
-extension KeysViewController: DeviceTagManagerDelegate {
-//    func manager(_ manager: MinewDeviceManager!, didScanDevices devices: [MinewDevice]!) {
-//        scannedDevices = devices
-//        tableView.reloadData()
-//    }
 }
 
 extension KeysViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - Table Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bindedDevices.count
+        return bindedTags.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let device = bindedDevices[indexPath.row] as? DeviceTag {
+        if let device = bindedTags[indexPath.row] as? DeviceTag {
             let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
             cell.textLabel?.text = device.device.stringValueFor(.macAddress)
             cell.detailTextLabel?.text = "Distance: \(device.device.distance ?? "Not Found")"
@@ -73,14 +64,10 @@ extension KeysViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     // MARK: - Table Delegate
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let controller = storyboard?.instantiateViewController(withIdentifier: "KeyDetailViewController") as! KeyDetailViewController
-        controller.device = bindedDevices[indexPath.row] as? DeviceTag
+        controller.device = bindedTags[indexPath.row] as? DeviceTag
         navigationController?.pushViewController(controller, animated: true)
     }
 }

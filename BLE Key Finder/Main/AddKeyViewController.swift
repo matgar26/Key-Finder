@@ -14,7 +14,7 @@ class AddKeyViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    private var scannedDevices: [DeviceTag] = []
+    private var scannedTags: [DeviceTag] = []
     private var edit = false
     private var manager: DeviceTagManager?
     
@@ -38,7 +38,7 @@ class AddKeyViewController: UIViewController {
 
 extension AddKeyViewController: DeviceTagManagerDelegate {
     func didManagerScanTags(_ tags: [DeviceTag]!) {
-        scannedDevices = tags
+        scannedTags = tags
         tableView.reloadData()
     }
 }
@@ -50,16 +50,15 @@ extension AddKeyViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return scannedDevices.count
+        return scannedTags.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let device = scannedDevices[indexPath.row]
+        let tag = scannedTags[indexPath.row]
         
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
-        cell.textLabel?.text = device.device.stringValueFor(.macAddress)
-        //        cell.detailTextLabel?.text = device.isConnected() ? String(format: "Distance: %.2fm", device.getValue(.distance)!.floatValue) : "Disconnected"
-        cell.detailTextLabel?.text = "Distance: \(device.device.distance ?? "Not Found")"
+        cell.textLabel?.text = tag.device.stringValueFor(.macAddress)
+        cell.detailTextLabel?.text = "Distance: \(tag.device.distance ?? "Not Found")"
         
         return cell
     }
@@ -73,7 +72,7 @@ extension AddKeyViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         manager?.stopScan()
         
-        let device = scannedDevices[indexPath.row]
+        let device = scannedTags[indexPath.row]
         
         let alreadyBinded = device.device.getValue(.bind)?.boolValue ?? false
         

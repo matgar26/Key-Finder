@@ -19,6 +19,7 @@ class KeyDetailViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Key Details"
         // Do any additional setup after loading the view, typically from a nib.
         
         distanceLabel.text = device?.device.distance
@@ -26,6 +27,6 @@ class KeyDetailViewController: UITableViewController {
     }
 
     @IBAction func ringTapped(_ sender: Any) {
-//        device?.sendInstruction(.search)        
+        device?.device.sendInstruction(.search)
     }
 }

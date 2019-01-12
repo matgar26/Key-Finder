@@ -170,27 +170,6 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
-		A8A4726F21E940BE00F567A5 /* Detail Key Finder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Detail Key Finder";
-			sourceTree = "<group>";
-		};
-		A8A4727021E940C200F567A5 /* Add Key Finder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Add Key Finder";
-			sourceTree = "<group>";
-		};
-		A8A4727121E940C400F567A5 /* Keys List */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Keys List";
-			sourceTree = "<group>";
-		};
 		A8A4729621E95C0400F567A5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,9 +278,6 @@
 		E752706E21C2272A002DE144 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				A8A4727121E940C400F567A5 /* Keys List */,
-				A8A4727021E940C200F567A5 /* Add Key Finder */,
-				A8A4726F21E940BE00F567A5 /* Detail Key Finder */,
 				E781E61F21C8AF8400638293 /* Cells */,
 				E752707B21C22C44002DE144 /* Login */,
 				E752704421C2264D002DE144 /* Main.storyboard */,

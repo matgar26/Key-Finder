@@ -27,4 +27,44 @@ extension MinewDevice {
         }
         return nil
     }
+    
+
+}
+
+extension DeviceTag {
+    func isConnected() -> Bool {
+        let isConnected = device.getValue(.connected)?.stringValue
+        let boolConnect = Bool(isConnected!) ?? false
+        return boolConnect
+    }
+
+    func stringValueFor(_ value: ValueIndex) -> String {
+        return device.getValue(value)?.stringValue ?? ""
+    }
+    
+    var distance: String? {
+        let distance = device.getValue(.distance)?.floatValue ?? nil
+        if distance != nil {
+            return String(distance!)
+        }
+        return nil
+    }
+    
+    var rssiDistance: String {
+        if let rssi = device.getValue(.rssi)?.intValue {
+            let positiveRssi = rssi * -1
+            if positiveRssi <= 42 {
+                return "Immediate"
+            }
+            if positiveRssi <= 70 {
+                return "Near"
+            }
+            return "Far"
+        }
+        if !isConnected() {
+            return "Disconnected"
+        }
+        
+        return "unknown"
+    }
 }
