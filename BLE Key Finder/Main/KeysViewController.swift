@@ -10,13 +10,23 @@ import UIKit
 
 class KeysViewController: UIViewController {
     
+    // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Properties
+    private var bindedTags: NSMutableArray = []
+    private var edit = false
+    private var manager: DeviceTagManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
-        // Do any additional setup after loading the view.
+        
+        manager = DeviceTagManager.sharedInstance()
+        
+        refreshConnectedDevices()
     }
     
     @IBAction func logoutTapped(_ sender: Any) {
@@ -24,25 +34,40 @@ class KeysViewController: UIViewController {
         appDelegate.logout()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        refreshConnectedDevices()
+    }
+    
+    private func refreshConnectedDevices() {
+        bindedTags = manager?.bindTags ?? []
+        tableView.reloadData()
+    }
 }
 
 extension KeysViewController: UITableViewDelegate, UITableViewDataSource {
+    // MARK: - Table Data Source
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return bindedTags.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "keyCell", for: indexPath) as? KeyCell else {return UITableViewCell()}
-        
-        cell.titleLabel.text = "mac address"
-        cell.subtitleLabel.text = "distance"
-        
-        return cell
+        if let device = bindedTags[indexPath.row] as? DeviceTag {
+            let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+            cell.textLabel?.text = device.device.stringValueFor(.macAddress)
+            cell.detailTextLabel?.text = "Distance: \(device.device.distance ?? "Not Found")"
+            
+            return cell
+        }
+        return UITableViewCell()
     }
     
+    // MARK: - Table Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let controller = storyboard?.instantiateViewController(withIdentifier: "KeyDetailViewController") as! KeyDetailViewController
+        controller.device = bindedTags[indexPath.row] as? DeviceTag
         navigationController?.pushViewController(controller, animated: true)
     }
 }

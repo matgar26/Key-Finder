@@ -17,11 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let keychain = Keychain(service: Constants.Keys.service)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        if let _ = keychain[Constants.Keys.authToken], let _ = keychain[Constants.Keys.hubId] {
-            showMainApplication()
-        } else {
-            showLogin()
-        }
+//        if let _ = keychain[Constants.Keys.authToken], let _ = keychain[Constants.Keys.hubId] {
+//            showMainApplication()
+//        } else {
+//            showLogin()
+//        }
+        showMainApplication()
         return true
     }
 

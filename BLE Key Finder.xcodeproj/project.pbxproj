@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8A4728F21E9589400F567A5 /* libMinewtech.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A4728221E9589300F567A5 /* libMinewtech.a */; };
+		A8A4729021E9589400F567A5 /* DeviceTag.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4728321E9589300F567A5 /* DeviceTag.m */; };
+		A8A4729121E9589400F567A5 /* DeviceTagManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4728721E9589400F567A5 /* DeviceTagManager.m */; };
+		A8A4729221E9589400F567A5 /* MinewDevice+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4728821E9589400F567A5 /* MinewDevice+Extras.swift */; };
+		A8A4729321E9589400F567A5 /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4728921E9589400F567A5 /* NotificationManager.m */; };
+		A8A4729421E9589400F567A5 /* AudioPlayerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4728A21E9589400F567A5 /* AudioPlayerTool.m */; };
+		A8A4729521E9589400F567A5 /* DeviceValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4728D21E9589400F567A5 /* DeviceValue.swift */; };
+		A8A4729821E95C2C00F567A5 /* alarm-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8A4729721E95C2C00F567A5 /* alarm-sound.wav */; };
 		C3365AF95527D46A1F124C2B /* Pods_BLE_Key_FinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50EA574EF0BF3FE51F4D44B /* Pods_BLE_Key_FinderTests.framework */; };
 		E747713A21D1BC2200B117E0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747713921D1BC2200B117E0 /* APIManager.swift */; };
 		E747713C21D1C10C00B117E0 /* LoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747713B21D1C10C00B117E0 /* LoginOperation.swift */; };
@@ -58,6 +66,22 @@
 		29DB997E245B2A19183AB4BF /* Pods-BLE Key FinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key FinderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Key FinderUITests/Pods-BLE Key FinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6A908581B97EDC49F33F1803 /* Pods-BLE Key Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key Finder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder.debug.xcconfig"; sourceTree = "<group>"; };
 		7BC30AD968E0ECAC87CACAF8 /* Pods_BLE_Key_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8A4728021E9589300F567A5 /* DeviceTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceTag.h; path = "BLE Key Finder/Minew Finder SDK/DeviceTag.h"; sourceTree = SOURCE_ROOT; };
+		A8A4728121E9589300F567A5 /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationManager.h; path = "BLE Key Finder/Minew Finder SDK/NotificationManager.h"; sourceTree = SOURCE_ROOT; };
+		A8A4728221E9589300F567A5 /* libMinewtech.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMinewtech.a; path = "BLE Key Finder/Minew Finder SDK/libMinewtech.a"; sourceTree = SOURCE_ROOT; };
+		A8A4728321E9589300F567A5 /* DeviceTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceTag.m; path = "BLE Key Finder/Minew Finder SDK/DeviceTag.m"; sourceTree = SOURCE_ROOT; };
+		A8A4728421E9589300F567A5 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "BLE Key Finder/Minew Finder SDK/Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		A8A4728521E9589300F567A5 /* MinewDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinewDevice.h; path = "BLE Key Finder/Minew Finder SDK/MinewDevice.h"; sourceTree = SOURCE_ROOT; };
+		A8A4728621E9589400F567A5 /* DeviceTagManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceTagManager.h; path = "BLE Key Finder/Minew Finder SDK/DeviceTagManager.h"; sourceTree = SOURCE_ROOT; };
+		A8A4728721E9589400F567A5 /* DeviceTagManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceTagManager.m; path = "BLE Key Finder/Minew Finder SDK/DeviceTagManager.m"; sourceTree = SOURCE_ROOT; };
+		A8A4728821E9589400F567A5 /* MinewDevice+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MinewDevice+Extras.swift"; path = "BLE Key Finder/Minew Finder SDK/MinewDevice+Extras.swift"; sourceTree = SOURCE_ROOT; };
+		A8A4728921E9589400F567A5 /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NotificationManager.m; path = "BLE Key Finder/Minew Finder SDK/NotificationManager.m"; sourceTree = SOURCE_ROOT; };
+		A8A4728A21E9589400F567A5 /* AudioPlayerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioPlayerTool.m; path = "BLE Key Finder/Minew Finder SDK/AudioPlayerTool.m"; sourceTree = SOURCE_ROOT; };
+		A8A4728B21E9589400F567A5 /* AudioPlayerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioPlayerTool.h; path = "BLE Key Finder/Minew Finder SDK/AudioPlayerTool.h"; sourceTree = SOURCE_ROOT; };
+		A8A4728C21E9589400F567A5 /* MinewDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinewDeviceManager.h; path = "BLE Key Finder/Minew Finder SDK/MinewDeviceManager.h"; sourceTree = SOURCE_ROOT; };
+		A8A4728D21E9589400F567A5 /* DeviceValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceValue.swift; path = "BLE Key Finder/Minew Finder SDK/DeviceValue.swift"; sourceTree = SOURCE_ROOT; };
+		A8A4728E21E9589400F567A5 /* MinewDeviceValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinewDeviceValue.h; path = "BLE Key Finder/Minew Finder SDK/MinewDeviceValue.h"; sourceTree = SOURCE_ROOT; };
+		A8A4729721E95C2C00F567A5 /* alarm-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "alarm-sound.wav"; sourceTree = "<group>"; };
 		AA31142A60224AC7FE045663 /* Pods_BLE_Key_FinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_FinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FD591D065F6EC9EC9E36E9 /* Pods-BLE Key FinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key FinderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Key FinderUITests/Pods-BLE Key FinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE54D6A0813D4ECC05B0F0FC /* Pods-BLE Key Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key Finder.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8A4728F21E9589400F567A5 /* libMinewtech.a in Frameworks */,
 				F76779C500031CE8A6861B41 /* Pods_BLE_Key_Finder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +146,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A84B4EA321D6F88C009DECD5 /* Minew Finder SDK */ = {
+			isa = PBXGroup;
+			children = (
+				A8A4729621E95C0400F567A5 /* Resources */,
+				A8A4728B21E9589400F567A5 /* AudioPlayerTool.h */,
+				A8A4728A21E9589400F567A5 /* AudioPlayerTool.m */,
+				A8A4728421E9589300F567A5 /* Bridging-Header.h */,
+				A8A4728021E9589300F567A5 /* DeviceTag.h */,
+				A8A4728321E9589300F567A5 /* DeviceTag.m */,
+				A8A4728621E9589400F567A5 /* DeviceTagManager.h */,
+				A8A4728721E9589400F567A5 /* DeviceTagManager.m */,
+				A8A4728D21E9589400F567A5 /* DeviceValue.swift */,
+				A8A4728221E9589300F567A5 /* libMinewtech.a */,
+				A8A4728521E9589300F567A5 /* MinewDevice.h */,
+				A8A4728821E9589400F567A5 /* MinewDevice+Extras.swift */,
+				A8A4728C21E9589400F567A5 /* MinewDeviceManager.h */,
+				A8A4728E21E9589400F567A5 /* MinewDeviceValue.h */,
+				A8A4728121E9589300F567A5 /* NotificationManager.h */,
+				A8A4728921E9589400F567A5 /* NotificationManager.m */,
+			);
+			name = "Minew Finder SDK";
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A8A4729621E95C0400F567A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A8A4729721E95C2C00F567A5 /* alarm-sound.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C3B989E0A8C2005853102882 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +247,7 @@
 				E752704021C2264D002DE144 /* AppDelegate.swift */,
 				E752704721C2264F002DE144 /* Assets.xcassets */,
 				E752704921C2264F002DE144 /* LaunchScreen.storyboard */,
+				A84B4EA321D6F88C009DECD5 /* Minew Finder SDK */,
 				E747713821D1BC0400B117E0 /* Networking */,
 				E747713D21D1C12A00B117E0 /* Models */,
 				E752707A21C22C2B002DE144 /* Shared */,
@@ -223,9 +281,9 @@
 				E781E61F21C8AF8400638293 /* Cells */,
 				E752707B21C22C44002DE144 /* Login */,
 				E752704421C2264D002DE144 /* Main.storyboard */,
-				E752704221C2264D002DE144 /* KeyDetailViewController.swift */,
-				E7EB1D2821C8349C007A5811 /* AddKeyViewController.swift */,
 				E7EB1D2A21C834E2007A5811 /* KeysViewController.swift */,
+				E7EB1D2821C8349C007A5811 /* AddKeyViewController.swift */,
+				E752704221C2264D002DE144 /* KeyDetailViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -378,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E752707D21C22ED2002DE144 /* Login.storyboard in Resources */,
+				A8A4729821E95C2C00F567A5 /* alarm-sound.wav in Resources */,
 				E752704B21C2264F002DE144 /* LaunchScreen.storyboard in Resources */,
 				E752704821C2264F002DE144 /* Assets.xcassets in Resources */,
 				E752704621C2264D002DE144 /* Main.storyboard in Resources */,
@@ -486,10 +545,15 @@
 			files = (
 				E752704321C2264D002DE144 /* KeyDetailViewController.swift in Sources */,
 				E7EB1D2B21C834E2007A5811 /* KeysViewController.swift in Sources */,
+				A8A4729021E9589400F567A5 /* DeviceTag.m in Sources */,
 				E752707721C22A85002DE144 /* UIViewController+Extras.swift in Sources */,
 				E752704121C2264D002DE144 /* AppDelegate.swift in Sources */,
+				A8A4729321E9589400F567A5 /* NotificationManager.m in Sources */,
 				E747714121D3033900B117E0 /* AlertDisplay.swift in Sources */,
 				E781E62521C8BEB700638293 /* AddKeyCell.swift in Sources */,
+				A8A4729121E9589400F567A5 /* DeviceTagManager.m in Sources */,
+				A8A4729221E9589400F567A5 /* MinewDevice+Extras.swift in Sources */,
+				A8A4729521E9589400F567A5 /* DeviceValue.swift in Sources */,
 				E752707521C22A64002DE144 /* Optional+Extras.swift in Sources */,
 				E747713A21D1BC2200B117E0 /* APIManager.swift in Sources */,
 				E7EB1D2921C8349C007A5811 /* AddKeyViewController.swift in Sources */,
@@ -497,6 +561,7 @@
 				E752707921C22AB8002DE144 /* UITableView+Extras.swift in Sources */,
 				E752707021C227D7002DE144 /* Log.swift in Sources */,
 				E781E62321C8AFCB00638293 /* KeyCell.swift in Sources */,
+				A8A4729421E9589400F567A5 /* AudioPlayerTool.m in Sources */,
 				E752707221C229DC002DE144 /* Constants.swift in Sources */,
 				E747713C21D1C10C00B117E0 /* LoginOperation.swift in Sources */,
 				E7EAC06F21C4C3400072822B /* Color.swift in Sources */,
@@ -677,14 +742,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YF8Q5XT26E;
+				DEVELOPMENT_TEAM = C26FYU2974;
 				INFOPLIST_FILE = "BLE Key Finder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.echolo.BLE-Key-Finder";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BLE\\ Key\\ Finder/Minew\\ Finder\\ SDK\\ ",
+					"$(PROJECT_DIR)/BLE\\ Key\\ Finder/New\\ Group",
+					"$(PROJECT_DIR)/BLE\\ Key\\ Finder/Minew\\ Finder\\ SDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.echolo.BLE-Key-Finder.jake";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BLE Key Finder/Minew Finder SDK/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -696,14 +768,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YF8Q5XT26E;
+				DEVELOPMENT_TEAM = C26FYU2974;
 				INFOPLIST_FILE = "BLE Key Finder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.echolo.BLE-Key-Finder";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BLE\\ Key\\ Finder/Minew\\ Finder\\ SDK\\ ",
+					"$(PROJECT_DIR)/BLE\\ Key\\ Finder/New\\ Group",
+					"$(PROJECT_DIR)/BLE\\ Key\\ Finder/Minew\\ Finder\\ SDK",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.echolo.BLE-Key-Finder.jake";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BLE Key Finder/Minew Finder SDK/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
