@@ -18,22 +18,25 @@ class AddKeyViewController: UIViewController, UITableViewOwner, RingingViewContr
     private var scannedTags: [DeviceTag] = []
     private var edit = false
     private var manager: DeviceTagManager?
+    
     lazy var ringVC: RingingViewController = { [weak self] in
-        return self?.storyboard?.instantiateViewController(withIdentifier: "RingingViewController") as! RingingViewController
+        let vc = self?.storyboard?.instantiateViewController(withIdentifier: "RingingViewController") as! RingingViewController
+        
+        vc.providesPresentationContextTransitionStyle = true
+        vc.definesPresentationContext = true
+        vc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        vc.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        vc.delegate = self
+        return vc
     }()
+    
+    var didCancelBind = true
     
     let delay = DelayOperation(interval: 6)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.standardSetup(owner: self, refreshAction: nil)
-        
-        ringVC.providesPresentationContextTransitionStyle = true
-        ringVC.definesPresentationContext = true
-        ringVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        ringVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        ringVC.delegate = self
-
         manager = DeviceTagManager.sharedInstance()
         manager?.delegate = self
         manager?.reset()
@@ -46,28 +49,35 @@ class AddKeyViewController: UIViewController, UITableViewOwner, RingingViewContr
     }
     
     func ringDevice(index: Int) {
-        
         self.present(ringVC, animated: true, completion: nil)
-        
         manager?.stopScan()
-        
         let device = scannedTags[index]
-        manager?.bind(device, completion: { (success, device) in
-            self.ringVC.didConnectToDevice()
-            device?.device.sendInstruction(.search)
-            
-            let completion = BlockOperation {
-                self.endRingAndReset()
+        didCancelBind = false
+        
+        manager?.bind(device, completion: { [weak self] (success, device) in
+            if self?.didCancelBind == true { // If the user pressed the cancel button in the ringVC before the manager could bind the device
+                self?.endRingAndReset()
+            } else {
+                self?.ringVC.didConnectToDevice()
+                device?.device.sendInstruction(.search)
+                
+                let completion = BlockOperation {
+                    self?.endRingAndReset()
+                }
+                
+                if let weakSelf = self {
+                    completion.addDependency(weakSelf.delay) // Wait until delayOperation is finished
+                    operationQueue.addOperations([weakSelf.delay, completion], waitUntilFinished: false)
+                }
             }
-            
-            completion.addDependency(self.delay) // Wait until delayOperation is finished
-            operationQueue.addOperations([self.delay, completion], waitUntilFinished: false)
         })
     }
     
     func endRingAndReset() {
+        didCancelBind = true
         self.manager?.reset()
         ringVC.dismiss(animated: true, completion: nil)
+        ringVC.resetUI()
     }
     
     func didEndRing() {

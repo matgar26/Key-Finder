@@ -17,6 +17,7 @@ class RingingViewController: UIViewController {
     
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var modalView: UIView!
     
     var delegate: RingingViewControllerDelegate? = nil
     // MARK: - Outlets
@@ -24,6 +25,12 @@ class RingingViewController: UIViewController {
     // MARK: - Properties
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        modalView.layer.cornerRadius = 10
+        
+        cancelButton.layer.cornerRadius = 8
+        cancelButton.layer.borderColor = UIColor.white.cgColor
+        cancelButton.layer.borderWidth = 2
     }
     
     func didConnectToDevice() {
@@ -32,5 +39,9 @@ class RingingViewController: UIViewController {
     
     @IBAction func cancel(_ sender: Any) {
         delegate?.didEndRing()
+    }
+    
+    func resetUI(){
+        titleLabel.text = "Connecting..."
     }
 }
