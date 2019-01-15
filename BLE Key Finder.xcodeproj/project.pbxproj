@@ -35,6 +35,7 @@
 		E752707D21C22ED2002DE144 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E752707C21C22ED2002DE144 /* Login.storyboard */; };
 		E781E62321C8AFCB00638293 /* KeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781E62221C8AFCB00638293 /* KeyCell.swift */; };
 		E781E62521C8BEB700638293 /* AddKeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781E62421C8BEB700638293 /* AddKeyCell.swift */; };
+		E7E31AE621ED706F00EA6AAD /* UITableViewCell+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E31AE521ED706F00EA6AAD /* UITableViewCell+Extras.swift */; };
 		E7EAC06D21C4BFCB0072822B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAC06C21C4BFCB0072822B /* LoginViewController.swift */; };
 		E7EAC06F21C4C3400072822B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAC06E21C4C3400072822B /* Color.swift */; };
 		E7EB1D2921C8349C007A5811 /* AddKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB1D2821C8349C007A5811 /* AddKeyViewController.swift */; };
@@ -111,6 +112,7 @@
 		E752707C21C22ED2002DE144 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E781E62221C8AFCB00638293 /* KeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCell.swift; sourceTree = "<group>"; };
 		E781E62421C8BEB700638293 /* AddKeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeyCell.swift; sourceTree = "<group>"; };
+		E7E31AE521ED706F00EA6AAD /* UITableViewCell+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extras.swift"; sourceTree = "<group>"; };
 		E7EAC06C21C4BFCB0072822B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E7EAC06E21C4C3400072822B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E7EB1D2821C8349C007A5811 /* AddKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeyViewController.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				E752707421C22A64002DE144 /* Optional+Extras.swift */,
 				E752707621C22A85002DE144 /* UIViewController+Extras.swift */,
 				E752707821C22AB8002DE144 /* UITableView+Extras.swift */,
+				E7E31AE521ED706F00EA6AAD /* UITableViewCell+Extras.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 			files = (
 				E752704321C2264D002DE144 /* KeyDetailViewController.swift in Sources */,
 				E7EB1D2B21C834E2007A5811 /* KeysViewController.swift in Sources */,
+				E7E31AE621ED706F00EA6AAD /* UITableViewCell+Extras.swift in Sources */,
 				A8A4729021E9589400F567A5 /* DeviceTag.m in Sources */,
 				E752707721C22A85002DE144 /* UIViewController+Extras.swift in Sources */,
 				E752704121C2264D002DE144 /* AppDelegate.swift in Sources */,
@@ -747,7 +751,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C26FYU2974;
+				DEVELOPMENT_TEAM = YF8Q5XT26E;
 				INFOPLIST_FILE = "BLE Key Finder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -759,7 +763,7 @@
 					"$(PROJECT_DIR)/BLE\\ Key\\ Finder/New\\ Group",
 					"$(PROJECT_DIR)/BLE\\ Key\\ Finder/Minew\\ Finder\\ SDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.echolo.BLE-Key-Finder.jake";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.echolo.BLE-Key-Finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BLE Key Finder/Minew Finder SDK/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -773,7 +777,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C26FYU2974;
+				DEVELOPMENT_TEAM = YF8Q5XT26E;
 				INFOPLIST_FILE = "BLE Key Finder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -785,7 +789,7 @@
 					"$(PROJECT_DIR)/BLE\\ Key\\ Finder/New\\ Group",
 					"$(PROJECT_DIR)/BLE\\ Key\\ Finder/Minew\\ Finder\\ SDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.echolo.BLE-Key-Finder.jake";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.echolo.BLE-Key-Finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BLE Key Finder/Minew Finder SDK/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;

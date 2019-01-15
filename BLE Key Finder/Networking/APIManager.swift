@@ -16,8 +16,6 @@ public class ApiManager {
     
     public static let shared = ApiManager()
     
-    public var manager = Session()
-    
     let baseUrl = Constants.Urls.dev
     
     public var baseHeaders: HTTPHeaders {

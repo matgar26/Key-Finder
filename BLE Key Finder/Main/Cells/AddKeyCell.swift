@@ -9,14 +9,18 @@
 import UIKit
 
 class AddKeyCell: UITableViewCell {
+    
+    static var cellHeight: CGFloat = 75
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var ringImageView: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        ringImageView.tintColor = Color.secondary
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

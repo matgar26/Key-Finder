@@ -28,6 +28,14 @@ extension MinewDevice {
         return nil
     }
     
+    var distanceInFeet: String? {
+        if let distance = self.getValue(.distance)?.floatValue ?? nil {
+            let feet = distance * 3.2808
+            return "\(feet.rounded())ft"
+        }
+        return nil
+    }
+    
 
 }
 
@@ -70,7 +78,7 @@ extension DeviceTag {
     var distanceInFeet: String? {
         if let distance = device.getValue(.distance)?.floatValue {
             let feet = distance * 3.2808
-            return "\(feet)ft"
+            return "\(feet.rounded())ft"
         }
         return nil
     }

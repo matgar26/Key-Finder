@@ -12,7 +12,6 @@ import KeychainAccess
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var phoneField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var topAnchorConstraint: NSLayoutConstraint!
     
@@ -53,7 +52,7 @@ class LoginViewController: UIViewController {
     }
     
     private func fieldsAreValid() -> Bool {
-        if !phoneField.text.isNilOrEmpty && !passwordField.text.isNilOrEmpty {
+        if !phoneField.text.isNilOrEmpty{
             return true
         } else {
             return false
@@ -75,6 +74,7 @@ class LoginViewController: UIViewController {
                     appDelegate.showMainApplication()
                 }
             })
+            
             operationQueue.addOperation(operation)
         }
     }

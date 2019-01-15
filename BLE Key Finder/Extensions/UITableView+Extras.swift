@@ -12,14 +12,15 @@ import UIKit
 public protocol UITableViewOwner: UITableViewDataSource, UITableViewDelegate {}
 
 public extension UITableView {
-    func standardSetup(owner: UITableViewOwner?, refreshAction: Selector) {
+    func standardSetup(owner: UITableViewOwner?, refreshAction: Selector?) {
         delegate = owner
         dataSource = owner
-        //        separatorColor = BambooTheme.instance.lightGrayColor
         tableFooterView = UIView()
-        refreshControl = UIRefreshControl()
-        refreshControl!.tintColor = UIColor.white
-        //        self.contentOffset = CGPoint(x:0, y:-refreshControl!.frame.size.height)  //someday Apple might fix this: https://stackoverflow.com/questions/19026351/ios-7-uirefreshcontrol-tintcolor-not-working-for-beginrefreshing
-        refreshControl!.addTarget(owner, action: refreshAction, for: UIControl.Event.valueChanged)
+        
+        if let action = refreshAction {
+            refreshControl = UIRefreshControl()
+            refreshControl!.tintColor = UIColor.white
+            refreshControl!.addTarget(owner, action: action, for: UIControl.Event.valueChanged)
+        }
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddKeyViewController: UIViewController {
+class AddKeyViewController: UIViewController, UITableViewOwner {
 
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -20,13 +20,17 @@ class AddKeyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView.standardSetup(owner: self, refreshAction: nil)
+//        tableView.delegate = self
+//        tableView.dataSource = self
         
         manager = DeviceTagManager.sharedInstance()
         manager?.delegate = self
         manager?.startScan()
+    }
+    
+    @objc func refreshTable() {
+        
     }
     
     @IBAction func logoutTapped(_ sender: Any) {
@@ -55,17 +59,18 @@ extension AddKeyViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tag = scannedTags[indexPath.row]
-        
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
-        cell.textLabel?.text = tag.device.stringValueFor(.macAddress)
-        cell.detailTextLabel?.text = "Distance: \(tag.device.distance ?? "Not Found")"
-        
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: AddKeyCell.reuseIdentifier, for: indexPath) as? AddKeyCell {
+            cell.titleLabel?.text = tag.device.stringValueFor(.macAddress)
+            cell.subTitleLabel?.text = "Distance: \(tag.device.distanceInFeet ?? "Not Found")"
+            return cell
+        } else {
+            return UITableViewCell()
+        }
     }
     
     // MARK: - Table Delegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return AddKeyCell.cellHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -73,8 +78,6 @@ extension AddKeyViewController: UITableViewDelegate, UITableViewDataSource {
         manager?.stopScan()
         manager?.reset()
         let device = scannedTags[indexPath.row]
-        
-        
         
         manager?.bind(device, completion: { (success, device) in
             device?.device.sendInstruction(.search)

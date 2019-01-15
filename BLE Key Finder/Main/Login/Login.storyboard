@@ -28,16 +28,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="tel"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVz-gy-PLt">
-                                <rect key="frame" x="40" y="431" width="295" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="8Kp-7a-aqq"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Lkk-PY-Idj">
                                 <rect key="frame" x="67.666666666666686" y="95" width="240" height="200"/>
                                 <constraints>
@@ -46,7 +36,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bff-nx-mO4">
-                                <rect key="frame" x="120" y="530" width="135" height="42"/>
+                                <rect key="frame" x="120" y="448" width="135" height="42"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="6Em-d6-pUC"/>
@@ -63,20 +53,16 @@
                         <color key="backgroundColor" red="0.23529411764705882" green="0.18823529411764706" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="geQ-46-MFO" firstAttribute="trailing" secondItem="bYJ-WL-e8c" secondAttribute="trailing" constant="40" id="1ej-pT-Zkl"/>
-                            <constraint firstItem="Bff-nx-mO4" firstAttribute="top" secondItem="yVz-gy-PLt" secondAttribute="bottom" constant="57" id="38J-g6-kZL"/>
-                            <constraint firstItem="yVz-gy-PLt" firstAttribute="leading" secondItem="geQ-46-MFO" secondAttribute="leading" constant="40" id="7w8-Ap-cTb"/>
+                            <constraint firstItem="Bff-nx-mO4" firstAttribute="top" secondItem="bYJ-WL-e8c" secondAttribute="bottom" constant="37" id="38J-g6-kZL"/>
                             <constraint firstItem="Lkk-PY-Idj" firstAttribute="centerX" secondItem="CuZ-QC-o5B" secondAttribute="centerX" id="Am7-xh-lsT"/>
-                            <constraint firstItem="yVz-gy-PLt" firstAttribute="top" secondItem="bYJ-WL-e8c" secondAttribute="bottom" constant="20" id="CZx-7Z-HO8"/>
                             <constraint firstItem="bYJ-WL-e8c" firstAttribute="leading" secondItem="geQ-46-MFO" secondAttribute="leading" constant="40" id="K4O-Bj-lZX"/>
                             <constraint firstItem="Lkk-PY-Idj" firstAttribute="top" secondItem="geQ-46-MFO" secondAttribute="top" constant="51" id="X9f-HM-72B"/>
                             <constraint firstItem="bYJ-WL-e8c" firstAttribute="top" secondItem="Lkk-PY-Idj" secondAttribute="bottom" constant="74" id="Y3S-Rt-oik"/>
-                            <constraint firstItem="geQ-46-MFO" firstAttribute="trailing" secondItem="yVz-gy-PLt" secondAttribute="trailing" constant="40" id="gpj-Ge-Ydn"/>
                             <constraint firstItem="Bff-nx-mO4" firstAttribute="centerX" secondItem="CuZ-QC-o5B" secondAttribute="centerX" id="qfy-lU-9pm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="geQ-46-MFO"/>
                     </view>
                     <connections>
-                        <outlet property="passwordField" destination="yVz-gy-PLt" id="DGN-GY-e76"/>
                         <outlet property="phoneField" destination="bYJ-WL-e8c" id="Ad1-pj-F2x"/>
                         <outlet property="signInButton" destination="Bff-nx-mO4" id="ouh-np-uRg"/>
                         <outlet property="topAnchorConstraint" destination="X9f-HM-72B" id="E3b-io-McE"/>

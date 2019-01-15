@@ -26,36 +26,6 @@ struct Color {
     static let primary = UIColor(hexString: "3c3075")
     static let primaryGradient = UIColor(hexString: "17122d")
     static let secondary = UIColor(hexString: "e09916")
-    
-    // MARK: Grays
-    
-    static let lightBackground = UIColor(hexString: "FAFAFA")
-    
-    static let lightTrim = UIColor(hexString: "D9D9D9")
-    
-    static let mediumTrim = UIColor(hexString: "C7C7C7")
-    
-    static let inactive = UIColor(hexString: "AEAEAE")
-    
-    static let disabled = Color.inactive.withAlphaComponent(0.4)
-    
-    static let darkTrim = UIColor(hexString: "9B9B9B")
-    
-    static let offBlack = UIColor(hexString: "444444")
-    
-    // MARK: - Search Bars
-    
-    /// Colors specific to search bars.
-    struct SearchBar {
-        
-        private init() {}
-        
-        /// Light gray. `F7F7F7`
-        static let background = UIColor(hexString: "F7F7F7")
-        
-        /// Dark gray. `7A797B`
-        static let placeholder = UIColor(hexString: "7A797B")
-    }
 }
 
 extension UIColor {

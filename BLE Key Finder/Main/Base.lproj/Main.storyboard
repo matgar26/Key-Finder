@@ -231,7 +231,7 @@
             </objects>
             <point key="canvasLocation" x="1066" y="129"/>
         </scene>
-        <!--Add Key-->
+        <!--Nearby Keys-->
         <scene sceneID="0AR-qq-hw0">
             <objects>
                 <viewController id="Gu5-7K-IpM" customClass="AddKeyViewController" customModule="BLE_Key_Finder" customModuleProvider="target" sceneMemberID="viewController">
@@ -243,40 +243,46 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addKeyCell" id="etT-4c-Exq" customClass="AddKeyCell" customModule="BLE_Key_Finder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddKeyCell" rowHeight="75" id="etT-4c-Exq" customClass="AddKeyCell" customModule="BLE_Key_Finder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="etT-4c-Exq" id="C3H-c0-No7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9t9-VU-iem">
-                                                    <rect key="frame" x="15" y="1" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="15" y="13.333333333333336" width="48" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nmz-MZ-MQM">
-                                                    <rect key="frame" x="15" y="22" width="31" height="13.333333333333336"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <rect key="frame" x="15.000000000000004" y="42.333333333333336" width="37.333333333333343" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="XK6-zX-L5T">
-                                                    <rect key="frame" x="340" y="12" width="20" height="20"/>
-                                                </activityIndicatorView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ringIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ePX-XN-Lab">
+                                                    <rect key="frame" x="320" y="17.333333333333329" width="40" height="40"/>
+                                                    <color key="tintColor" red="0.87843137250000003" green="0.59999999999999998" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="FHz-N4-7Vf"/>
+                                                        <constraint firstAttribute="height" constant="40" id="K3I-tN-Xwn"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="XK6-zX-L5T" firstAttribute="centerY" secondItem="C3H-c0-No7" secondAttribute="centerY" id="1fI-Zt-P8d"/>
-                                                <constraint firstItem="XK6-zX-L5T" firstAttribute="trailing" secondItem="C3H-c0-No7" secondAttribute="trailingMargin" id="D0U-V1-b9Z"/>
                                                 <constraint firstItem="Nmz-MZ-MQM" firstAttribute="leading" secondItem="C3H-c0-No7" secondAttribute="leading" constant="15" id="FAr-kD-fQQ"/>
                                                 <constraint firstItem="9t9-VU-iem" firstAttribute="bottom" secondItem="C3H-c0-No7" secondAttribute="centerY" id="RV4-wA-cbx"/>
-                                                <constraint firstItem="Nmz-MZ-MQM" firstAttribute="top" secondItem="C3H-c0-No7" secondAttribute="centerY" id="VGu-CI-xBr"/>
+                                                <constraint firstItem="Nmz-MZ-MQM" firstAttribute="top" secondItem="C3H-c0-No7" secondAttribute="centerY" constant="5" id="VGu-CI-xBr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ePX-XN-Lab" secondAttribute="trailing" id="krr-WI-QFX"/>
+                                                <constraint firstItem="ePX-XN-Lab" firstAttribute="centerY" secondItem="C3H-c0-No7" secondAttribute="centerY" id="pFZ-Mp-fSA"/>
                                                 <constraint firstItem="9t9-VU-iem" firstAttribute="leading" secondItem="C3H-c0-No7" secondAttribute="leadingMargin" id="vJJ-Pb-Mow"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" red="0.87843137250000003" green="0.59999999999999998" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <outlet property="activityIndicator" destination="XK6-zX-L5T" id="eFW-wg-2Xt"/>
+                                            <outlet property="ringImageView" destination="ePX-XN-Lab" id="IeS-Ra-On5"/>
                                             <outlet property="subTitleLabel" destination="Nmz-MZ-MQM" id="l5J-AZ-QK4"/>
                                             <outlet property="titleLabel" destination="9t9-VU-iem" id="O8I-wP-ULk"/>
                                         </connections>
@@ -293,8 +299,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sHB-N3-XNW"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Key" id="lMr-eV-Evu">
+                    <navigationItem key="navigationItem" title="Nearby Keys" id="lMr-eV-Evu">
                         <barButtonItem key="backBarButtonItem" title=" " id="09T-Hc-fho"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="1bY-bG-HQY"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="7FW-Ii-wWj" id="pnZ-eh-DIN"/>
@@ -303,10 +310,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ra-YS-9sP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="1Ic-C8-trf"/>
             </objects>
-            <point key="canvasLocation" x="1065" y="801"/>
+            <point key="canvasLocation" x="1064.8" y="800.98522167487693"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ringIcon" width="85" height="85"/>
         <image name="volumeIcon" width="16" height="16"/>
     </resources>
 </document>
