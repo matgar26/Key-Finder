@@ -28,12 +28,12 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="h6f-55-jdc" kind="relationship" relationship="rootViewController" id="AqC-bY-cfh"/>
+                        <segue destination="Gu5-7K-IpM" kind="relationship" relationship="rootViewController" id="NxS-98-5rj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4t-kj-c8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-564" y="130"/>
+            <point key="canvasLocation" x="260" y="801"/>
         </scene>
         <!--Connected Keys-->
         <scene sceneID="cRo-wu-Gg0">
@@ -97,9 +97,6 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="rlx-3L-DRL">
                             <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
-                            <connections>
-                                <segue destination="Gu5-7K-IpM" kind="show" id="AX3-2M-plM"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -306,7 +303,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ra-YS-9sP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="1Ic-C8-trf"/>
             </objects>
-            <point key="canvasLocation" x="260" y="867"/>
+            <point key="canvasLocation" x="1065" y="801"/>
         </scene>
     </scenes>
     <resources>

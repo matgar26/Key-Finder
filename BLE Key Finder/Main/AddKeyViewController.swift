@@ -71,19 +71,17 @@ extension AddKeyViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         manager?.stopScan()
-        
+        manager?.reset()
         let device = scannedTags[indexPath.row]
         
-        let alreadyBinded = device.device.getValue(.bind)?.boolValue ?? false
         
-        if alreadyBinded {
-            //TODO
-            return
-        }
         
-        // Alert to ask are you sure
         manager?.bind(device, completion: { (success, device) in
-            self.navigationController?.popViewController(animated: true)
+            device?.device.sendInstruction(.search)
+//            device?.device.sendInstruction(.cancelSearch)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6.0) { // Change `2.0` to the desired number of seconds.
+                self.manager?.unbind(device)
+            }
         })
         
     }
