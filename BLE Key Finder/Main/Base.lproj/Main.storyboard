@@ -301,7 +301,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Nearby Keys" id="lMr-eV-Evu">
                         <barButtonItem key="backBarButtonItem" title=" " id="09T-Hc-fho"/>
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="1bY-bG-HQY"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="1bY-bG-HQY">
+                            <connections>
+                                <action selector="logoutTapped:" destination="Gu5-7K-IpM" id="5sO-eo-CYX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="7FW-Ii-wWj" id="pnZ-eh-DIN"/>
@@ -311,6 +315,71 @@
                 <searchDisplayController id="1Ic-C8-trf"/>
             </objects>
             <point key="canvasLocation" x="1064.8" y="800.98522167487693"/>
+        </scene>
+        <!--Ringing View Controller-->
+        <scene sceneID="3Ld-5X-lml">
+            <objects>
+                <viewController storyboardIdentifier="RingingViewController" id="RgZ-qp-6Wr" customClass="RingingViewController" customModule="BLE_Key_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2UE-t9-9M6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRy-In-jcq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQd-Y5-ahH">
+                                <rect key="frame" x="40" y="242" width="295" height="328"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6H-nN-Tqy">
+                                        <rect key="frame" x="128.66666666666666" y="145" width="38" height="38"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <state key="normal" title="End">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancel:" destination="RgZ-qp-6Wr" eventType="touchUpInside" id="Fyu-Ko-Ubw"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connecting..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77B-IR-dvA">
+                                        <rect key="frame" x="10" y="30" width="275" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.59999999999999998" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="s6H-nN-Tqy" firstAttribute="centerX" secondItem="SQd-Y5-ahH" secondAttribute="centerX" id="3Je-dQ-ebL"/>
+                                    <constraint firstItem="s6H-nN-Tqy" firstAttribute="centerY" secondItem="SQd-Y5-ahH" secondAttribute="centerY" id="Eyr-lJ-uPj"/>
+                                    <constraint firstItem="77B-IR-dvA" firstAttribute="top" secondItem="SQd-Y5-ahH" secondAttribute="top" constant="30" id="bMf-n5-6px"/>
+                                    <constraint firstAttribute="height" constant="328" id="s2g-jb-QO7"/>
+                                    <constraint firstAttribute="trailing" secondItem="77B-IR-dvA" secondAttribute="trailing" constant="10" id="uJV-yb-7kG"/>
+                                    <constraint firstItem="77B-IR-dvA" firstAttribute="leading" secondItem="SQd-Y5-ahH" secondAttribute="leading" constant="10" id="xkM-gQ-MzR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cRy-In-jcq" firstAttribute="leading" secondItem="V97-6S-Lae" secondAttribute="leading" id="B0c-z9-QhV"/>
+                            <constraint firstItem="V97-6S-Lae" firstAttribute="trailing" secondItem="SQd-Y5-ahH" secondAttribute="trailing" constant="40" id="Cz6-58-qSY"/>
+                            <constraint firstItem="V97-6S-Lae" firstAttribute="trailing" secondItem="cRy-In-jcq" secondAttribute="trailing" id="LhH-GD-bCs"/>
+                            <constraint firstAttribute="bottom" secondItem="cRy-In-jcq" secondAttribute="bottom" id="Ov2-J9-SrK"/>
+                            <constraint firstItem="cRy-In-jcq" firstAttribute="top" secondItem="2UE-t9-9M6" secondAttribute="top" id="SNa-2j-jny"/>
+                            <constraint firstItem="SQd-Y5-ahH" firstAttribute="centerX" secondItem="2UE-t9-9M6" secondAttribute="centerX" id="UlC-4T-isU"/>
+                            <constraint firstItem="SQd-Y5-ahH" firstAttribute="centerY" secondItem="2UE-t9-9M6" secondAttribute="centerY" id="gIE-Vv-sIe"/>
+                            <constraint firstItem="SQd-Y5-ahH" firstAttribute="leading" secondItem="V97-6S-Lae" secondAttribute="leading" constant="40" id="xt9-Pq-LEy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V97-6S-Lae"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="s6H-nN-Tqy" id="fQ7-be-wKe"/>
+                        <outlet property="titleLabel" destination="77B-IR-dvA" id="4dc-AH-SBR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ouo-f4-pG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1991.2" y="799.50738916256159"/>
         </scene>
     </scenes>
     <resources>

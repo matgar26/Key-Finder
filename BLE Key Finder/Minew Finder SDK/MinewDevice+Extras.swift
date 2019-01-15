@@ -41,8 +41,8 @@ extension MinewDevice {
 
 extension DeviceTag {
     func isConnected() -> Bool {
-        let isConnected = device.getValue(.connected)?.stringValue
-        let boolConnect = Bool(isConnected!) ?? false
+        guard let isConnected = device.getValue(.connected)?.stringValue else { return false }
+        let boolConnect = Bool(isConnected) ?? false
         return boolConnect
     }
 

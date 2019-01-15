@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import PSOperations
 
-class AddKeyViewController: UIViewController, UITableViewOwner {
+class AddKeyViewController: UIViewController, UITableViewOwner, RingingViewControllerDelegate {
 
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -17,20 +18,26 @@ class AddKeyViewController: UIViewController, UITableViewOwner {
     private var scannedTags: [DeviceTag] = []
     private var edit = false
     private var manager: DeviceTagManager?
+    lazy var ringVC: RingingViewController = { [weak self] in
+        return self?.storyboard?.instantiateViewController(withIdentifier: "RingingViewController") as! RingingViewController
+    }()
+    
+    let delay = DelayOperation(interval: 6)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.standardSetup(owner: self, refreshAction: nil)
-//        tableView.delegate = self
-//        tableView.dataSource = self
         
+        ringVC.providesPresentationContextTransitionStyle = true
+        ringVC.definesPresentationContext = true
+        ringVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        ringVC.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        ringVC.delegate = self
+
         manager = DeviceTagManager.sharedInstance()
         manager?.delegate = self
+        manager?.reset()
         manager?.startScan()
-    }
-    
-    @objc func refreshTable() {
-        
     }
     
     @IBAction func logoutTapped(_ sender: Any) {
@@ -38,6 +45,38 @@ class AddKeyViewController: UIViewController, UITableViewOwner {
         appDelegate.logout()
     }
     
+    func ringDevice(index: Int) {
+        
+        self.present(ringVC, animated: true, completion: nil)
+        
+        manager?.stopScan()
+        
+        let device = scannedTags[index]
+        manager?.bind(device, completion: { (success, device) in
+            self.ringVC.didConnectToDevice()
+            device?.device.sendInstruction(.search)
+            
+            let completion = BlockOperation {
+                self.endRingAndReset()
+            }
+            
+            completion.addDependency(self.delay) // Wait until delayOperation is finished
+            operationQueue.addOperations([self.delay, completion], waitUntilFinished: false)
+        })
+    }
+    
+    func endRingAndReset() {
+        self.manager?.reset()
+        ringVC.dismiss(animated: true, completion: nil)
+    }
+    
+    func didEndRing() {
+        if(delay.isExecuting) {
+            delay.finish()
+        } else { // If the manager has not yet finished binding
+            endRingAndReset()
+        }
+    }
 }
 
 extension AddKeyViewController: DeviceTagManagerDelegate {
@@ -75,17 +114,6 @@ extension AddKeyViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        manager?.stopScan()
-        manager?.reset()
-        let device = scannedTags[indexPath.row]
-        
-        manager?.bind(device, completion: { (success, device) in
-            device?.device.sendInstruction(.search)
-//            device?.device.sendInstruction(.cancelSearch)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 6.0) { // Change `2.0` to the desired number of seconds.
-                self.manager?.unbind(device)
-            }
-        })
-        
+        ringDevice(index: indexPath.row)
     }
 }
