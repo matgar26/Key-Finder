@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol RingingViewControllerDelegate {
+protocol RingingViewControllerDelegate: AnyObject {
     func didEndRing()
 }
 
@@ -19,7 +19,7 @@ class RingingViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var modalView: UIView!
     
-    var delegate: RingingViewControllerDelegate? = nil
+    weak var delegate: RingingViewControllerDelegate? = nil
     // MARK: - Outlets
     
     // MARK: - Properties

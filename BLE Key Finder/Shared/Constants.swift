@@ -20,8 +20,7 @@ struct Constants {
     
     struct Keys {
         // Keychain Keys
-        static let service = "https://refactor-active-oversight.herokuapp.com/"
-        static let authToken = "token"
+        static let service = "http://api.findersolutions.com/echolo/mobile/"
         static let hubId = "id"
 
         // Reachability
@@ -31,12 +30,7 @@ struct Constants {
     }
     
     struct Urls {
-        static let local = "http://10.0.2.204:3000/"
-        static let baseUrl = "https://ao-staging-api.finalze.com/"
-        static let dev = "https://ao-dev-api.finalze.com/"
-        static let qa = "https://ao-qa-api.finalze.com/"
-        static let staging = "https://ao-staging-api.finalze.com/"
-        static let prod = "https://ao-api.finalze.com/"
-        static let forgotPassword = "https://ao-staging.finalze.com/forgot-password"
+        static let dev = "http://api.findersolutions.com/echolo/mobile/"
+        static let prod = "http://api.findersolutions.com/echolo/mobile/"
     }
 }

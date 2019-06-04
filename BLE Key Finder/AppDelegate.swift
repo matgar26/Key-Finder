@@ -17,12 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let keychain = Keychain(service: Constants.Keys.service)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        if let _ = keychain[Constants.Keys.authToken], let _ = keychain[Constants.Keys.hubId] {
-//            showMainApplication()
-//        } else {
-//            showLogin()
-//        }
-        showMainApplication()
+        if let _ = keychain[Constants.Keys.hubId] {
+            showMainApplication()
+        } else {
+            showLogin()
+        }
         return true
     }
 
@@ -71,7 +70,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func logout() {
         do{
-            try keychain.remove(Constants.Keys.authToken)
             try keychain.remove(Constants.Keys.hubId)
             Log.authentication.message("Successfully logged out")
         }catch{

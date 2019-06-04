@@ -43,9 +43,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func signInTapped(_ sender: Any) {
         if fieldsAreValid() {
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = mainStoryboard.instantiateInitialViewController()
-            UIApplication.shared.keyWindow?.rootViewController = viewController
+            signIn()
         } else {
             AlertDisplay.showAlert(parent: self, title: "Complete All Fields", message: "Please complete all fields before continuing.")
         }
@@ -61,20 +59,16 @@ class LoginViewController: UIViewController {
     
     func signIn() {
         if let phoneInt = Int(phoneField.text ?? "") {
-            let operation = LoginOperation(userNumber: phoneInt, completion: { (authInfo, error, status) in
-                if let e = error {
-                    AlertDisplay.showAlert(parent: self, title: "Login Failed", message: "The phone number provided does not have access to this information.")
-                    Log.authentication.message(e)
-                } else if let auth = authInfo, let key = auth.key, let id = auth.hubId {
-                    Log.authentication.message("Successfully logged In")
+            let operation = LoginOperation(userNumber: phoneInt) { result in
+                switch result {
+                case .success(let data):
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.keychain[Constants.Keys.authToken] = key
-                    appDelegate.keychain[Constants.Keys.hubId] = id
-                    
+                    appDelegate.keychain[Constants.Keys.hubId] = data.hubId
                     appDelegate.showMainApplication()
+                case .failure(let error):
+                    AlertDisplay.showAlert(parent: self, title: error.title, message: error.message)
                 }
-            })
-            
+            }
             operationQueue.addOperation(operation)
         }
     }

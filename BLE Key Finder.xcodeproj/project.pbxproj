@@ -413,10 +413,12 @@
 					};
 					E752705021C2264F002DE144 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = E752703C21C2264D002DE144;
 					};
 					E752705B21C2264F002DE144 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = E752703C21C2264D002DE144;
 					};
 				};
@@ -770,7 +772,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.echolo.BLE-Key-Finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BLE Key Finder/Minew Finder SDK/Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -796,7 +798,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.echolo.BLE-Key-Finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BLE Key Finder/Minew Finder SDK/Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -817,7 +819,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.echolo.BLE-Key-FinderTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLE Key Finder.app/BLE Key Finder";
 			};
@@ -839,7 +841,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.echolo.BLE-Key-FinderTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLE Key Finder.app/BLE Key Finder";
 			};
@@ -860,7 +862,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.echolo.BLE-Key-FinderUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "BLE Key Finder";
 			};
@@ -881,7 +883,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.echolo.BLE-Key-FinderUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "BLE Key Finder";
 			};

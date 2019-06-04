@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -137,7 +137,7 @@
 		13F4C70DC03D94C7B046F5AD9EC8404E /* Pods-BLE Key Finder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLE Key Finder-umbrella.h"; sourceTree = "<group>"; };
 		155D20DECE265522CEC7FBDD36FCD1F5 /* iCloudContainerCapability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = iCloudContainerCapability.swift; path = PSOperations/iCloudContainerCapability.swift; sourceTree = "<group>"; };
 		167C20411327EA3B0FE0ED97BD59E62A /* RequestAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestAdapter.swift; path = Source/RequestAdapter.swift; sourceTree = "<group>"; };
-		17D17F9987D97B3C00118BDBD10A2A9D /* Pods_BLE_Key_FinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLE_Key_FinderUITests.framework; path = "Pods-BLE Key FinderUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17D17F9987D97B3C00118BDBD10A2A9D /* Pods_BLE_Key_FinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_FinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17DCC4876B9DC64AD657ECE71B6E231E /* OperationObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OperationObserver.swift; path = PSOperations/OperationObserver.swift; sourceTree = "<group>"; };
 		197533FE6D1EE58A9FBC68F6E56036E0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		1B66C5F65D7F0C3A220C386B2A1F8A56 /* Pods-BLE Key Finder-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLE Key Finder-frameworks.sh"; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 		23E19B347CB09A2FE859C758D09D8E02 /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
 		26B3526BA5D7923E91B8DF433D0C8C62 /* RequestRetrier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestRetrier.swift; path = Source/RequestRetrier.swift; sourceTree = "<group>"; };
 		27F0244E8AC43A617A969C9F807B9703 /* QualityOfService+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "QualityOfService+.swift"; path = "PSOperations/QualityOfService+.swift"; sourceTree = "<group>"; };
-		30EDB8A66AA6BBAB9CA4993A9A407DC4 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30EDB8A66AA6BBAB9CA4993A9A407DC4 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		317D1DB6578DC563C5B6DC1E11041141 /* Pods-BLE Key FinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLE Key FinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		34CEC2D5FA432982BAF309A41046BB44 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		35309406E300CE42E0AB3E7AF7723C6F /* PushCapability-OSX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PushCapability-OSX.swift"; path = "PSOperations/PushCapability-OSX.swift"; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 		79B13EDCFCF9C5402806D551C8D2CF76 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		7CA9E58C9B9140B2F44CE0ED6FA73C00 /* Pods-BLE Key FinderUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLE Key FinderUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7CF67C9EE05563E039762A1239E10A82 /* Pods-BLE Key FinderUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLE Key FinderUITests-umbrella.h"; sourceTree = "<group>"; };
-		80407CBF406F346934F6AF91B8C1583A /* Pods_BLE_Key_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLE_Key_FinderTests.framework; path = "Pods-BLE Key FinderTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80407CBF406F346934F6AF91B8C1583A /* Pods_BLE_Key_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		814C53304FBCC6FDE36DD205D37C9093 /* Pods-BLE Key FinderTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLE Key FinderTests-umbrella.h"; sourceTree = "<group>"; };
 		8300F5B803C70EEB051FFE7695CDA0DB /* OperationErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OperationErrors.swift; path = PSOperations/OperationErrors.swift; sourceTree = "<group>"; };
 		83687C1B5750671CF1F6139B9293FE52 /* Pods-BLE Key FinderTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLE Key FinderTests-dummy.m"; sourceTree = "<group>"; };
@@ -188,17 +188,17 @@
 		850F489822A2FE30F3405386DBAAA8BE /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		8533A706FBF9C079253F1E1D52F9DC5B /* SilentCondition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SilentCondition.swift; path = PSOperations/SilentCondition.swift; sourceTree = "<group>"; };
 		8587D26524D42988DA2E7C24871F861A /* Pods-BLE Key FinderTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BLE Key FinderTests.modulemap"; sourceTree = "<group>"; };
-		89AE12BB1000C51A2F9456AA29240CB3 /* PSOperations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PSOperations.framework; path = PSOperations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89AE12BB1000C51A2F9456AA29240CB3 /* PSOperations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PSOperations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9041FB67A29D1BC4DB613A7C0169FB51 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		924546FD6020B4BBCE1578E30BC1A411 /* Operation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operation.swift; path = PSOperations/Operation.swift; sourceTree = "<group>"; };
 		93872BC82D345874E04BE119738F02C8 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		993DD2341676BEA809130536B3580D77 /* NSOperation+Operations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSOperation+Operations.swift"; path = "PSOperations/NSOperation+Operations.swift"; sourceTree = "<group>"; };
 		99539849F25DDC91BBB8BF7D1707D327 /* Pods-BLE Key FinderUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BLE Key FinderUITests.modulemap"; sourceTree = "<group>"; };
 		9A3B39C5C6C1DD405B9E509E02C9C133 /* Pods-BLE Key FinderTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLE Key FinderTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A26D352F9DF442415BB49C8A7BDADFAB /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		A6CDD3911F06D91950A09BF1D14F18EF /* Protector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protector.swift; path = Source/Protector.swift; sourceTree = "<group>"; };
-		AA3955C2E17A76DCDDA1A71FD6D1BEC1 /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainAccess.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA3955C2E17A76DCDDA1A71FD6D1BEC1 /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA9CC68E985D2AF93945014FB34785F /* PSOperations.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PSOperations.xcconfig; sourceTree = "<group>"; };
 		ACDC00B663E8F12C040370A3012B3C30 /* KeychainAccess-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-prefix.pch"; sourceTree = "<group>"; };
 		B041E3D098CEC2BAE1AD5DC833DE0E2F /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/HTTPMethod.swift; sourceTree = "<group>"; };
@@ -234,7 +234,7 @@
 		E7798DEAE8F4F8DC2C21C8BF498939F4 /* TimeoutObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeoutObserver.swift; path = PSOperations/TimeoutObserver.swift; sourceTree = "<group>"; };
 		E93614D5C69D4D8659C6EEFEC44E1DD4 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		ED97CF2E31F52B919909D8482059D1C7 /* NegatedCondition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NegatedCondition.swift; path = PSOperations/NegatedCondition.swift; sourceTree = "<group>"; };
-		F174D3C72342D191C511E7B9BE79B6E4 /* Pods_BLE_Key_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLE_Key_Finder.framework; path = "Pods-BLE Key Finder.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F174D3C72342D191C511E7B9BE79B6E4 /* Pods_BLE_Key_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B3E4E237C26306871AFB4E77CA88BC /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		F3E966939329E75FB7465E5BA1FCE99F /* ExclusivityController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExclusivityController.swift; path = PSOperations/ExclusivityController.swift; sourceTree = "<group>"; };
 		F7987A82A73DE293F5DE386BCE7D3C24 /* Capability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Capability.swift; path = PSOperations/Capability.swift; sourceTree = "<group>"; };
@@ -303,7 +303,6 @@
 				1F4D4D975125B6D5F7A99AB925987431 /* Keychain.swift */,
 				B990E70F3AAD0D0768CD87F43D6D44FA /* Support Files */,
 			);
-			name = KeychainAccess;
 			path = KeychainAccess;
 			sourceTree = "<group>";
 		};
@@ -340,7 +339,6 @@
 				35DC9FFAE8BDC998A1CD932B420ED1A1 /* Core */,
 				C453BCB7B33D53A7A0436D581E819995 /* Support Files */,
 			);
-			name = PSOperations;
 			path = PSOperations;
 			sourceTree = "<group>";
 		};
@@ -414,7 +412,6 @@
 				F1B3E4E237C26306871AFB4E77CA88BC /* Validation.swift */,
 				FF36A7D6C0F05E68BF2BD001D7411790 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -722,14 +719,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					0EE987AC5AE644CD8D3C1D30BB25DC87 = {
+						LastSwiftMigration = 1020;
+					};
+					1630C0AC0CCE2704C3F517D1DFD56586 = {
+						LastSwiftMigration = 1020;
+					};
+					F4F924592B32BDAA78AB03741F0E9550 = {
+						LastSwiftMigration = 1020;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
 			productRefGroup = 3D5C65487BB945AC120A4D9DEEC3BDB6 /* Products */;
@@ -953,11 +962,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-BLE Key FinderTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-BLE Key FinderTests/Pods-BLE Key FinderTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -977,6 +982,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1057,11 +1063,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-BLE Key FinderTests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-BLE Key FinderTests/Pods-BLE Key FinderTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1096,11 +1098,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-BLE Key FinderUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-BLE Key FinderUITests/Pods-BLE Key FinderUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1135,11 +1133,7 @@
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -1170,11 +1164,7 @@
 				INFOPLIST_FILE = "Target Support Files/PSOperations/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PSOperations/PSOperations.modulemap";
 				PRODUCT_MODULE_NAME = PSOperations;
 				PRODUCT_NAME = PSOperations;
@@ -1192,6 +1182,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1243,8 +1234,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1268,11 +1258,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-BLE Key Finder/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1307,11 +1293,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-BLE Key Finder/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1344,11 +1326,7 @@
 				INFOPLIST_FILE = "Target Support Files/KeychainAccess/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/KeychainAccess/KeychainAccess.modulemap";
 				PRODUCT_MODULE_NAME = KeychainAccess;
 				PRODUCT_NAME = KeychainAccess;
@@ -1381,11 +1359,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-BLE Key FinderUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-BLE Key FinderUITests/Pods-BLE Key FinderUITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1419,11 +1393,7 @@
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -1455,11 +1425,7 @@
 				INFOPLIST_FILE = "Target Support Files/PSOperations/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/PSOperations/PSOperations.modulemap";
 				PRODUCT_MODULE_NAME = PSOperations;
 				PRODUCT_NAME = PSOperations;
@@ -1491,11 +1457,7 @@
 				INFOPLIST_FILE = "Target Support Files/KeychainAccess/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/KeychainAccess/KeychainAccess.modulemap";
 				PRODUCT_MODULE_NAME = KeychainAccess;
 				PRODUCT_NAME = KeychainAccess;

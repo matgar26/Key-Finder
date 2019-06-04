@@ -12,37 +12,42 @@ import PSOperations
 
 open class LoginOperation: PSOperation, ApiOperation {
     
-    var completion: ((AuthenticationInfo?,  String?, Int?) -> Void)?
+    var completion: ((Swift.Result<AuthenticationInfo, NetworkError>) -> Void)
     var userNumber: Int
     
-    public init(userNumber: Int, completion: @escaping (AuthenticationInfo?, String?, Int?) -> Void) {
+    public init(userNumber: Int, completion: @escaping ((Swift.Result<AuthenticationInfo, NetworkError>) -> Void)) {
         self.completion = completion
         self.userNumber = userNumber
         super.init()
     }
     
     override open func execute() {
-        AF.request(url, parameters: nil, headers: fullHeaders)
+        ApiManager.shared.manager.request(url, method: HTTPMethod.post, parameters: nil, headers: fullHeaders)
             .validate()
             .responseDecodable { (dataResponse: DataResponse<AuthenticationInfo>) in
                 switch dataResponse.result {
                 case .success(let data):
-                    Log.services.message("Successfully Authenticated")
-                    self.completion?(data, nil, dataResponse.response?.statusCode)
+                    if let _ = data.hubId {
+                        Log.services.message("Successfully Authenticated")
+                        self.completion(.success(data))
+                    } else {
+                        Log.services.message("Unsuccessfully Authenticated")
+                        self.completion(.failure(NetworkError(title: "Incorrect Phone Number", message: "Please enter a valid phone number", code: dataResponse.response?.statusCode)))
+                    }
                 case .failure(let error):
                     Log.services.error(error)
-                    self.completion?(nil, error.localizedDescription, dataResponse.response?.statusCode)
+                    self.completion(.failure(NetworkError(title: "Something went wrong", message: "Please try again", code: dataResponse.response?.statusCode)))
                 }
                 self.finish()
         }
     }
     
     public var path: String {
-        return "companies"
+        return "login"
     }
     
     public var parameters: [String : Any] {
-        return ["user_number": userNumber]
+        return ["phone_number": userNumber]
     }
     
     public var headers: HTTPHeaders? {
