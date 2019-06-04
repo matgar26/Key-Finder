@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    private var manager: DeviceTagManager? // Make singleton later?
+    
     let keychain = Keychain(service: Constants.Keys.service)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -22,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             showLogin()
         }
+        application.setMinimumBackgroundFetchInterval(900)
         return true
     }
 
@@ -78,5 +81,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         showLogin()
     }
 
+}
+
+extension AppDelegate: DeviceTagManagerDelegate {
+    
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        if application.applicationState == .background {
+            manager = DeviceTagManager.sharedInstance()
+            manager?.delegate = self
+            manager?.reset()
+            manager?.startScan()
+            completionHandler(.newData)
+        }
+    }
+    
+    func didManagerScanTags(_ tags: [DeviceTag]!) {
+        // TODO: Add post to post tags here
+        // Once background network request is successful
+        manager?.stopScan()
+        manager?.delegate = nil
+        manager = nil
+    }
+    
 }
 
