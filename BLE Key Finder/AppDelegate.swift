@@ -74,9 +74,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func logout() {
         do{
             try keychain.remove(Constants.Keys.hubId)
-            Log.authentication.message("Successfully logged out")
+//            Log.authentication.message("Successfully logged out")
         }catch{
-            Log.authentication.error(error)
+//            Log.authentication.error(error)
         }
         showLogin()
     }

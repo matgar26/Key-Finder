@@ -28,14 +28,14 @@ open class LoginOperation: PSOperation, ApiOperation {
                 switch dataResponse.result {
                 case .success(let data):
                     if let _ = data.hubId {
-                        Log.services.message("Successfully Authenticated")
+//                        Log.services.message("Successfully Authenticated")
                         self.completion(.success(data))
                     } else {
-                        Log.services.message("Unsuccessfully Authenticated")
+//                        Log.services.message("Unsuccessfully Authenticated")
                         self.completion(.failure(NetworkError(title: "Incorrect Phone Number", message: "Please enter a valid phone number", code: dataResponse.response?.statusCode)))
                     }
                 case .failure(let error):
-                    Log.services.error(error)
+//                    Log.services.error(error)
                     self.completion(.failure(NetworkError(title: "Something went wrong", message: "Please try again", code: dataResponse.response?.statusCode)))
                 }
                 self.finish()
