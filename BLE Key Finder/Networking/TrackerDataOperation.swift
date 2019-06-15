@@ -13,14 +13,11 @@ import PSOperations
 open class TrackerDataOperation: PSOperation, ApiOperation {
     
     var completion: ((Swift.Result<AuthenticationInfo, NetworkError>) -> Void)
-    var userNumber: Int
     var nodes: [[String: Any]]
     
-    public init(userNumber: Int, devices: [DeviceTag], completion: @escaping ((Swift.Result<AuthenticationInfo, NetworkError>) -> Void)) {
+    public init(devices: [DeviceTag], completion: @escaping ((Swift.Result<AuthenticationInfo, NetworkError>) -> Void)) {
         self.completion = completion
-        self.userNumber = userNumber
         self.nodes = devices.map({ $0.deviceTagParameters() })
-        
         super.init()
     }
     

@@ -43,17 +43,14 @@ class AddKeyViewController: UIViewController, UITableViewOwner, RingingViewContr
         manager?.delegate = self
         manager?.reset()
         manager?.startScan()
+        
+        setupKeyUpdates()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
-        
-        // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
-        
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -146,6 +143,27 @@ extension AddKeyViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - Updates devices every ten minutes
+
+extension AddKeyViewController {
+    
+    private func setupKeyUpdates() {
+        updateDevices()
+        var _ = Timer.scheduledTimer(timeInterval: 600.0, target: self, selector: #selector(updateDevices), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateDevices() {
+        let operation = TrackerDataOperation(devices: scannedTags) { result in
+            switch result {
+            case .success: ()
+            case .failure: () 
+            }
+        }
+        operationQueue.addOperation(operation)
+    }
+    
+}
+
 extension AddKeyViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -155,3 +173,5 @@ extension AddKeyViewController: CLLocationManagerDelegate {
     }
     
 }
+
+

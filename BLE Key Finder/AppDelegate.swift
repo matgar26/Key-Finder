@@ -101,6 +101,14 @@ extension AppDelegate: DeviceTagManagerDelegate {
         manager?.stopScan()
         manager?.delegate = nil
         manager = nil
+        
+        let operation = TrackerDataOperation(devices: tags) { result in
+            switch result {
+            case .success: ()
+            case .failure: ()
+            }
+        }
+        operationQueue.addOperation(operation)
     }
     
 }
