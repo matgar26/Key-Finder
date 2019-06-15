@@ -9,12 +9,21 @@
 import Foundation
 import Alamofire
 import PSOperations
+import KeychainAccess
 
 public let operationQueue = PSOperationQueue()
 
 public class ApiManager {
     
     public static let shared = ApiManager()
+    
+    private var keychain = Keychain(service: Constants.Keys.service)
+    
+    public var hubId: String {
+        get {
+            return keychain[Constants.Keys.hubId] ?? "" 
+        }
+    }
     
     public var manager = Session()
     

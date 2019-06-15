@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		A8A4729521E9589400F567A5 /* DeviceValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4728D21E9589400F567A5 /* DeviceValue.swift */; };
 		A8A4729821E95C2C00F567A5 /* alarm-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8A4729721E95C2C00F567A5 /* alarm-sound.wav */; };
 		C3365AF95527D46A1F124C2B /* Pods_BLE_Key_FinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50EA574EF0BF3FE51F4D44B /* Pods_BLE_Key_FinderTests.framework */; };
+		E25A58EA22B49974009D638F /* TrackerDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A58E922B49974009D638F /* TrackerDataOperation.swift */; };
+		E2A18DF522B4BB870087D0B4 /* DeviceTag+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A18DF422B4BB870087D0B4 /* DeviceTag+Ext.swift */; };
+		E2A18DF822B4BFE90087D0B4 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A18DF722B4BFE90087D0B4 /* UserManager.swift */; };
 		E747713A21D1BC2200B117E0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747713921D1BC2200B117E0 /* APIManager.swift */; };
 		E747713C21D1C10C00B117E0 /* LoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747713B21D1C10C00B117E0 /* LoginOperation.swift */; };
 		E747713F21D1C1BD00B117E0 /* AuthenticationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747713E21D1C1BD00B117E0 /* AuthenticationInfo.swift */; };
@@ -87,6 +90,9 @@
 		AA31142A60224AC7FE045663 /* Pods_BLE_Key_FinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_FinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FD591D065F6EC9EC9E36E9 /* Pods-BLE Key FinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key FinderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Key FinderUITests/Pods-BLE Key FinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE54D6A0813D4ECC05B0F0FC /* Pods-BLE Key Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key Finder.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder.release.xcconfig"; sourceTree = "<group>"; };
+		E25A58E922B49974009D638F /* TrackerDataOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerDataOperation.swift; sourceTree = "<group>"; };
+		E2A18DF422B4BB870087D0B4 /* DeviceTag+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceTag+Ext.swift"; sourceTree = "<group>"; };
+		E2A18DF722B4BFE90087D0B4 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		E50EA574EF0BF3FE51F4D44B /* Pods_BLE_Key_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E747713921D1BC2200B117E0 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		E747713B21D1C10C00B117E0 /* LoginOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOperation.swift; sourceTree = "<group>"; };
@@ -205,11 +211,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E2A18DF622B4BFD40087D0B4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E2A18DF722B4BFE90087D0B4 /* UserManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		E747713821D1BC0400B117E0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				E747713921D1BC2200B117E0 /* APIManager.swift */,
 				E747713B21D1C10C00B117E0 /* LoginOperation.swift */,
+				E25A58E922B49974009D638F /* TrackerDataOperation.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -256,6 +271,7 @@
 				E747713D21D1C12A00B117E0 /* Models */,
 				E752707A21C22C2B002DE144 /* Shared */,
 				E752707321C22A50002DE144 /* Extensions */,
+				E2A18DF622B4BFD40087D0B4 /* Managers */,
 				E752706E21C2272A002DE144 /* Main */,
 			);
 			path = "BLE Key Finder";
@@ -300,6 +316,7 @@
 				E752707621C22A85002DE144 /* UIViewController+Extras.swift */,
 				E752707821C22AB8002DE144 /* UITableView+Extras.swift */,
 				E7E31AE521ED706F00EA6AAD /* UITableViewCell+Extras.swift */,
+				E2A18DF422B4BB870087D0B4 /* DeviceTag+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -496,21 +513,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
-				"${BUILT_PRODUCTS_DIR}/PSOperations/PSOperations.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PSOperations.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		88E1015F89465D332A070B59 /* [CP] Check Pods Manifest.lock */ = {
@@ -556,7 +568,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E25A58EA22B49974009D638F /* TrackerDataOperation.swift in Sources */,
 				E752704321C2264D002DE144 /* KeyDetailViewController.swift in Sources */,
+				E2A18DF822B4BFE90087D0B4 /* UserManager.swift in Sources */,
 				E7E31AE821ED783400EA6AAD /* RingingViewController.swift in Sources */,
 				E7EB1D2B21C834E2007A5811 /* KeysViewController.swift in Sources */,
 				E7E31AE621ED706F00EA6AAD /* UITableViewCell+Extras.swift in Sources */,
@@ -574,6 +588,7 @@
 				E7EB1D2921C8349C007A5811 /* AddKeyViewController.swift in Sources */,
 				E7EAC06D21C4BFCB0072822B /* LoginViewController.swift in Sources */,
 				E752707921C22AB8002DE144 /* UITableView+Extras.swift in Sources */,
+				E2A18DF522B4BB870087D0B4 /* DeviceTag+Ext.swift in Sources */,
 				E752707021C227D7002DE144 /* Log.swift in Sources */,
 				E781E62321C8AFCB00638293 /* KeyCell.swift in Sources */,
 				A8A4729421E9589400F567A5 /* AudioPlayerTool.m in Sources */,

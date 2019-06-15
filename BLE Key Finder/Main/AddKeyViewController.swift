@@ -8,6 +8,7 @@
 
 import UIKit
 import PSOperations
+import CoreLocation
 
 class AddKeyViewController: UIViewController, UITableViewOwner, RingingViewControllerDelegate {
 
@@ -18,6 +19,7 @@ class AddKeyViewController: UIViewController, UITableViewOwner, RingingViewContr
     private var scannedTags: [DeviceTag] = []
     private var edit = false
     private var manager: DeviceTagManager?
+    private let locationManager = CLLocationManager()
     
     lazy var ringVC: RingingViewController = { [weak self] in
         let vc = self?.storyboard?.instantiateViewController(withIdentifier: "RingingViewController") as! RingingViewController
@@ -41,6 +43,22 @@ class AddKeyViewController: UIViewController, UITableViewOwner, RingingViewContr
         manager?.delegate = self
         manager?.reset()
         manager?.startScan()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
     }
     
     @IBAction func logoutTapped(_ sender: Any) {
@@ -126,4 +144,14 @@ extension AddKeyViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         ringDevice(index: indexPath.row)
     }
+}
+
+extension AddKeyViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        UserManager.shared.currentLatitude = locValue.latitude
+        UserManager.shared.currentLongitude = locValue.longitude
+    }
+    
 }
