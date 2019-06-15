@@ -49,13 +49,18 @@
                                     <action selector="signInTapped:" destination="TQ1-Pa-Dwy" eventType="touchUpInside" id="oZ0-WV-fOZ"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="1pc-W2-BHv">
+                                <rect key="frame" x="177.66666666666666" y="459" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.23529411764705882" green="0.18823529411764706" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="geQ-46-MFO" firstAttribute="trailing" secondItem="bYJ-WL-e8c" secondAttribute="trailing" constant="40" id="1ej-pT-Zkl"/>
                             <constraint firstItem="Bff-nx-mO4" firstAttribute="top" secondItem="bYJ-WL-e8c" secondAttribute="bottom" constant="37" id="38J-g6-kZL"/>
+                            <constraint firstItem="1pc-W2-BHv" firstAttribute="centerY" secondItem="Bff-nx-mO4" secondAttribute="centerY" id="6N2-A9-gLS"/>
                             <constraint firstItem="Lkk-PY-Idj" firstAttribute="centerX" secondItem="CuZ-QC-o5B" secondAttribute="centerX" id="Am7-xh-lsT"/>
                             <constraint firstItem="bYJ-WL-e8c" firstAttribute="leading" secondItem="geQ-46-MFO" secondAttribute="leading" constant="40" id="K4O-Bj-lZX"/>
+                            <constraint firstItem="1pc-W2-BHv" firstAttribute="centerX" secondItem="Bff-nx-mO4" secondAttribute="centerX" id="P64-SS-B2G"/>
                             <constraint firstItem="Lkk-PY-Idj" firstAttribute="top" secondItem="geQ-46-MFO" secondAttribute="top" constant="51" id="X9f-HM-72B"/>
                             <constraint firstItem="bYJ-WL-e8c" firstAttribute="top" secondItem="Lkk-PY-Idj" secondAttribute="bottom" constant="74" id="Y3S-Rt-oik"/>
                             <constraint firstItem="Bff-nx-mO4" firstAttribute="centerX" secondItem="CuZ-QC-o5B" secondAttribute="centerX" id="qfy-lU-9pm"/>
@@ -63,6 +68,7 @@
                         <viewLayoutGuide key="safeArea" id="geQ-46-MFO"/>
                     </view>
                     <connections>
+                        <outlet property="loadingIndicator" destination="1pc-W2-BHv" id="opr-l7-fFH"/>
                         <outlet property="phoneField" destination="bYJ-WL-e8c" id="Ad1-pj-F2x"/>
                         <outlet property="signInButton" destination="Bff-nx-mO4" id="ouh-np-uRg"/>
                         <outlet property="topAnchorConstraint" destination="X9f-HM-72B" id="E3b-io-McE"/>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7324FAE78355FE37EDF2E0D4 /* Pods_BLE_Key_FinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073EDBAA1145BEB697D3E7B6 /* Pods_BLE_Key_FinderTests.framework */; };
+		A192C50FCF14D5040FAB283E /* Pods_BLE_Key_FinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6528B8005CF0870E1204AEF2 /* Pods_BLE_Key_FinderUITests.framework */; };
 		A8A4728F21E9589400F567A5 /* libMinewtech.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A4728221E9589300F567A5 /* libMinewtech.a */; };
 		A8A4729021E9589400F567A5 /* DeviceTag.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4728321E9589300F567A5 /* DeviceTag.m */; };
 		A8A4729121E9589400F567A5 /* DeviceTagManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4728721E9589400F567A5 /* DeviceTagManager.m */; };
@@ -15,7 +17,6 @@
 		A8A4729421E9589400F567A5 /* AudioPlayerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A4728A21E9589400F567A5 /* AudioPlayerTool.m */; };
 		A8A4729521E9589400F567A5 /* DeviceValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A4728D21E9589400F567A5 /* DeviceValue.swift */; };
 		A8A4729821E95C2C00F567A5 /* alarm-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = A8A4729721E95C2C00F567A5 /* alarm-sound.wav */; };
-		C3365AF95527D46A1F124C2B /* Pods_BLE_Key_FinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50EA574EF0BF3FE51F4D44B /* Pods_BLE_Key_FinderTests.framework */; };
 		E25A58EA22B49974009D638F /* TrackerDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25A58E922B49974009D638F /* TrackerDataOperation.swift */; };
 		E2A18DF522B4BB870087D0B4 /* DeviceTag+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A18DF422B4BB870087D0B4 /* DeviceTag+Ext.swift */; };
 		E2A18DF822B4BFE90087D0B4 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A18DF722B4BFE90087D0B4 /* UserManager.swift */; };
@@ -44,8 +45,7 @@
 		E7EAC06F21C4C3400072822B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAC06E21C4C3400072822B /* Color.swift */; };
 		E7EB1D2921C8349C007A5811 /* AddKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB1D2821C8349C007A5811 /* AddKeyViewController.swift */; };
 		E7EB1D2B21C834E2007A5811 /* KeysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB1D2A21C834E2007A5811 /* KeysViewController.swift */; };
-		F76779C500031CE8A6861B41 /* Pods_BLE_Key_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC30AD968E0ECAC87CACAF8 /* Pods_BLE_Key_Finder.framework */; };
-		FF6B629AB658609CD42A44D3 /* Pods_BLE_Key_FinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA31142A60224AC7FE045663 /* Pods_BLE_Key_FinderUITests.framework */; };
+		FF543EFC0E605BEEE7FEF65F /* Pods_BLE_Key_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F3F3322A8DA4AEF80E6502 /* Pods_BLE_Key_Finder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,11 +66,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		131D6CBEB24316F4B3E59DCE /* Pods-BLE Key FinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key FinderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Key FinderTests/Pods-BLE Key FinderTests.release.xcconfig"; sourceTree = "<group>"; };
-		19AD9C7B3632BE9437358964 /* Pods-BLE Key FinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key FinderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Key FinderTests/Pods-BLE Key FinderTests.debug.xcconfig"; sourceTree = "<group>"; };
-		29DB997E245B2A19183AB4BF /* Pods-BLE Key FinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key FinderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Key FinderUITests/Pods-BLE Key FinderUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6A908581B97EDC49F33F1803 /* Pods-BLE Key Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key Finder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder.debug.xcconfig"; sourceTree = "<group>"; };
-		7BC30AD968E0ECAC87CACAF8 /* Pods_BLE_Key_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		073EDBAA1145BEB697D3E7B6 /* Pods_BLE_Key_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1104E636988A115EA34F36FB /* Pods-BLE Key FinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key FinderUITests.release.xcconfig"; path = "Target Support Files/Pods-BLE Key FinderUITests/Pods-BLE Key FinderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6528B8005CF0870E1204AEF2 /* Pods_BLE_Key_FinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_FinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B693A4BC4201F24DFCA4B70 /* Pods-BLE Key Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key Finder.release.xcconfig"; path = "Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder.release.xcconfig"; sourceTree = "<group>"; };
+		90F3F3322A8DA4AEF80E6502 /* Pods_BLE_Key_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A4728021E9589300F567A5 /* DeviceTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceTag.h; path = "BLE Key Finder/Minew Finder SDK/DeviceTag.h"; sourceTree = SOURCE_ROOT; };
 		A8A4728121E9589300F567A5 /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NotificationManager.h; path = "BLE Key Finder/Minew Finder SDK/NotificationManager.h"; sourceTree = SOURCE_ROOT; };
 		A8A4728221E9589300F567A5 /* libMinewtech.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMinewtech.a; path = "BLE Key Finder/Minew Finder SDK/libMinewtech.a"; sourceTree = SOURCE_ROOT; };
@@ -87,13 +87,13 @@
 		A8A4728D21E9589400F567A5 /* DeviceValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceValue.swift; path = "BLE Key Finder/Minew Finder SDK/DeviceValue.swift"; sourceTree = SOURCE_ROOT; };
 		A8A4728E21E9589400F567A5 /* MinewDeviceValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinewDeviceValue.h; path = "BLE Key Finder/Minew Finder SDK/MinewDeviceValue.h"; sourceTree = SOURCE_ROOT; };
 		A8A4729721E95C2C00F567A5 /* alarm-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "alarm-sound.wav"; sourceTree = "<group>"; };
-		AA31142A60224AC7FE045663 /* Pods_BLE_Key_FinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_FinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5FD591D065F6EC9EC9E36E9 /* Pods-BLE Key FinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key FinderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Key FinderUITests/Pods-BLE Key FinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		BE54D6A0813D4ECC05B0F0FC /* Pods-BLE Key Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key Finder.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder.release.xcconfig"; sourceTree = "<group>"; };
+		C4CF636BE2426A35CBF31634 /* Pods-BLE Key FinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key FinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-BLE Key FinderUITests/Pods-BLE Key FinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA015127DDF070930A8C1395 /* Pods-BLE Key FinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key FinderTests.debug.xcconfig"; path = "Target Support Files/Pods-BLE Key FinderTests/Pods-BLE Key FinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC00431EB599694DBD8E1C55 /* Pods-BLE Key FinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key FinderTests.release.xcconfig"; path = "Target Support Files/Pods-BLE Key FinderTests/Pods-BLE Key FinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		E2577F41187FEE46E5F293FC /* Pods-BLE Key Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Key Finder.debug.xcconfig"; path = "Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder.debug.xcconfig"; sourceTree = "<group>"; };
 		E25A58E922B49974009D638F /* TrackerDataOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerDataOperation.swift; sourceTree = "<group>"; };
 		E2A18DF422B4BB870087D0B4 /* DeviceTag+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceTag+Ext.swift"; sourceTree = "<group>"; };
 		E2A18DF722B4BFE90087D0B4 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		E50EA574EF0BF3FE51F4D44B /* Pods_BLE_Key_FinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLE_Key_FinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E747713921D1BC2200B117E0 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		E747713B21D1C10C00B117E0 /* LoginOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOperation.swift; sourceTree = "<group>"; };
 		E747713E21D1C1BD00B117E0 /* AuthenticationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationInfo.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8A4728F21E9589400F567A5 /* libMinewtech.a in Frameworks */,
-				F76779C500031CE8A6861B41 /* Pods_BLE_Key_Finder.framework in Frameworks */,
+				FF543EFC0E605BEEE7FEF65F /* Pods_BLE_Key_Finder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3365AF95527D46A1F124C2B /* Pods_BLE_Key_FinderTests.framework in Frameworks */,
+				7324FAE78355FE37EDF2E0D4 /* Pods_BLE_Key_FinderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,13 +149,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF6B629AB658609CD42A44D3 /* Pods_BLE_Key_FinderUITests.framework in Frameworks */,
+				A192C50FCF14D5040FAB283E /* Pods_BLE_Key_FinderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56AA8607752A1DAC14E792EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2577F41187FEE46E5F293FC /* Pods-BLE Key Finder.debug.xcconfig */,
+				6B693A4BC4201F24DFCA4B70 /* Pods-BLE Key Finder.release.xcconfig */,
+				DA015127DDF070930A8C1395 /* Pods-BLE Key FinderTests.debug.xcconfig */,
+				DC00431EB599694DBD8E1C55 /* Pods-BLE Key FinderTests.release.xcconfig */,
+				C4CF636BE2426A35CBF31634 /* Pods-BLE Key FinderUITests.debug.xcconfig */,
+				1104E636988A115EA34F36FB /* Pods-BLE Key FinderUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		853F284EF425D2984212637C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90F3F3322A8DA4AEF80E6502 /* Pods_BLE_Key_Finder.framework */,
+				073EDBAA1145BEB697D3E7B6 /* Pods_BLE_Key_FinderTests.framework */,
+				6528B8005CF0870E1204AEF2 /* Pods_BLE_Key_FinderUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A84B4EA321D6F88C009DECD5 /* Minew Finder SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,29 +210,6 @@
 				A8A4729721E95C2C00F567A5 /* alarm-sound.wav */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		C3B989E0A8C2005853102882 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7BC30AD968E0ECAC87CACAF8 /* Pods_BLE_Key_Finder.framework */,
-				E50EA574EF0BF3FE51F4D44B /* Pods_BLE_Key_FinderTests.framework */,
-				AA31142A60224AC7FE045663 /* Pods_BLE_Key_FinderUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DEA50929C191E538D4F986A4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6A908581B97EDC49F33F1803 /* Pods-BLE Key Finder.debug.xcconfig */,
-				BE54D6A0813D4ECC05B0F0FC /* Pods-BLE Key Finder.release.xcconfig */,
-				19AD9C7B3632BE9437358964 /* Pods-BLE Key FinderTests.debug.xcconfig */,
-				131D6CBEB24316F4B3E59DCE /* Pods-BLE Key FinderTests.release.xcconfig */,
-				B5FD591D065F6EC9EC9E36E9 /* Pods-BLE Key FinderUITests.debug.xcconfig */,
-				29DB997E245B2A19183AB4BF /* Pods-BLE Key FinderUITests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		E2A18DF622B4BFD40087D0B4 /* Managers */ = {
@@ -244,8 +245,8 @@
 				E752705421C2264F002DE144 /* BLE Key FinderTests */,
 				E752705F21C2264F002DE144 /* BLE Key FinderUITests */,
 				E752703E21C2264D002DE144 /* Products */,
-				DEA50929C191E538D4F986A4 /* Pods */,
-				C3B989E0A8C2005853102882 /* Frameworks */,
+				56AA8607752A1DAC14E792EB /* Pods */,
+				853F284EF425D2984212637C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -357,11 +358,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E752706521C2264F002DE144 /* Build configuration list for PBXNativeTarget "BLE Key Finder" */;
 			buildPhases = (
-				E292D96C2FF842CBC15CBA5B /* [CP] Check Pods Manifest.lock */,
+				667482D8A8E17BFA8F0D190C /* [CP] Check Pods Manifest.lock */,
 				E752703921C2264D002DE144 /* Sources */,
 				E752703A21C2264D002DE144 /* Frameworks */,
 				E752703B21C2264D002DE144 /* Resources */,
-				8325880BCEBE34AD34224682 /* [CP] Embed Pods Frameworks */,
+				E14A49BA3380CE3B244D3F1C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -376,7 +377,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E752706821C2264F002DE144 /* Build configuration list for PBXNativeTarget "BLE Key FinderTests" */;
 			buildPhases = (
-				1DF036A0F41BFD3BE7A0CE0A /* [CP] Check Pods Manifest.lock */,
+				93B3132406C6ADE03DC94180 /* [CP] Check Pods Manifest.lock */,
 				E752704D21C2264F002DE144 /* Sources */,
 				E752704E21C2264F002DE144 /* Frameworks */,
 				E752704F21C2264F002DE144 /* Resources */,
@@ -395,7 +396,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E752706B21C2264F002DE144 /* Build configuration list for PBXNativeTarget "BLE Key FinderUITests" */;
 			buildPhases = (
-				88E1015F89465D332A070B59 /* [CP] Check Pods Manifest.lock */,
+				752F2F91B44DEF0944BDC1E5 /* [CP] Check Pods Manifest.lock */,
 				E752705821C2264F002DE144 /* Sources */,
 				E752705921C2264F002DE144 /* Frameworks */,
 				E752705A21C2264F002DE144 /* Resources */,
@@ -490,51 +491,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1DF036A0F41BFD3BE7A0CE0A /* [CP] Check Pods Manifest.lock */ = {
+		667482D8A8E17BFA8F0D190C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BLE Key FinderTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BLE Key Finder-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8325880BCEBE34AD34224682 /* [CP] Embed Pods Frameworks */ = {
+		752F2F91B44DEF0944BDC1E5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		88E1015F89465D332A070B59 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BLE Key FinderUITests-checkManifestLockResult.txt",
 			);
@@ -543,22 +535,52 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E292D96C2FF842CBC15CBA5B /* [CP] Check Pods Manifest.lock */ = {
+		93B3132406C6ADE03DC94180 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BLE Key Finder-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BLE Key FinderTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E14A49BA3380CE3B244D3F1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/PSOperations/PSOperations.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PSOperations.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BLE Key Finder/Pods-BLE Key Finder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -768,7 +790,7 @@
 		};
 		E752706621C2264F002DE144 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A908581B97EDC49F33F1803 /* Pods-BLE Key Finder.debug.xcconfig */;
+			baseConfigurationReference = E2577F41187FEE46E5F293FC /* Pods-BLE Key Finder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -794,7 +816,7 @@
 		};
 		E752706721C2264F002DE144 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE54D6A0813D4ECC05B0F0FC /* Pods-BLE Key Finder.release.xcconfig */;
+			baseConfigurationReference = 6B693A4BC4201F24DFCA4B70 /* Pods-BLE Key Finder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -820,7 +842,7 @@
 		};
 		E752706921C2264F002DE144 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19AD9C7B3632BE9437358964 /* Pods-BLE Key FinderTests.debug.xcconfig */;
+			baseConfigurationReference = DA015127DDF070930A8C1395 /* Pods-BLE Key FinderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -842,7 +864,7 @@
 		};
 		E752706A21C2264F002DE144 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 131D6CBEB24316F4B3E59DCE /* Pods-BLE Key FinderTests.release.xcconfig */;
+			baseConfigurationReference = DC00431EB599694DBD8E1C55 /* Pods-BLE Key FinderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -864,7 +886,7 @@
 		};
 		E752706C21C2264F002DE144 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5FD591D065F6EC9EC9E36E9 /* Pods-BLE Key FinderUITests.debug.xcconfig */;
+			baseConfigurationReference = C4CF636BE2426A35CBF31634 /* Pods-BLE Key FinderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -885,7 +907,7 @@
 		};
 		E752706D21C2264F002DE144 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29DB997E245B2A19183AB4BF /* Pods-BLE Key FinderUITests.release.xcconfig */;
+			baseConfigurationReference = 1104E636988A115EA34F36FB /* Pods-BLE Key FinderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

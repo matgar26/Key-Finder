@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var phoneField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var topAnchorConstraint: NSLayoutConstraint!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +59,8 @@ class LoginViewController: UIViewController {
     }
     
     func signIn() {
+        signInButton.isHidden = true
+        loadingIndicator.startAnimating()
         if let phoneInt = Int(phoneField.text ?? "") {
             let operation = LoginOperation(userNumber: phoneInt) { result in
                 switch result {
@@ -66,6 +69,8 @@ class LoginViewController: UIViewController {
                     appDelegate.keychain[Constants.Keys.hubId] = data.hubId
                     appDelegate.showMainApplication()
                 case .failure(let error):
+                    self.signInButton.isHidden = false
+                    self.loadingIndicator.stopAnimating()
                     AlertDisplay.showAlert(parent: self, title: error.title, message: error.message)
                 }
             }
