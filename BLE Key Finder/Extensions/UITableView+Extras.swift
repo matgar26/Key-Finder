@@ -19,7 +19,6 @@ public extension UITableView {
         
         if let action = refreshAction {
             refreshControl = UIRefreshControl()
-            refreshControl!.tintColor = UIColor.white
             refreshControl!.addTarget(owner, action: action, for: UIControl.Event.valueChanged)
         }
     }

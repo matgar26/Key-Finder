@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,7 +25,6 @@
 		E747713F21D1C1BD00B117E0 /* AuthenticationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747713E21D1C1BD00B117E0 /* AuthenticationInfo.swift */; };
 		E747714121D3033900B117E0 /* AlertDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E747714021D3033900B117E0 /* AlertDisplay.swift */; };
 		E752704121C2264D002DE144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752704021C2264D002DE144 /* AppDelegate.swift */; };
-		E752704321C2264D002DE144 /* KeyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752704221C2264D002DE144 /* KeyDetailViewController.swift */; };
 		E752704621C2264D002DE144 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E752704421C2264D002DE144 /* Main.storyboard */; };
 		E752704821C2264F002DE144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E752704721C2264F002DE144 /* Assets.xcassets */; };
 		E752704B21C2264F002DE144 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E752704921C2264F002DE144 /* LaunchScreen.storyboard */; };
@@ -37,14 +36,12 @@
 		E752707721C22A85002DE144 /* UIViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752707621C22A85002DE144 /* UIViewController+Extras.swift */; };
 		E752707921C22AB8002DE144 /* UITableView+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E752707821C22AB8002DE144 /* UITableView+Extras.swift */; };
 		E752707D21C22ED2002DE144 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E752707C21C22ED2002DE144 /* Login.storyboard */; };
-		E781E62321C8AFCB00638293 /* KeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781E62221C8AFCB00638293 /* KeyCell.swift */; };
 		E781E62521C8BEB700638293 /* AddKeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E781E62421C8BEB700638293 /* AddKeyCell.swift */; };
 		E7E31AE621ED706F00EA6AAD /* UITableViewCell+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E31AE521ED706F00EA6AAD /* UITableViewCell+Extras.swift */; };
 		E7E31AE821ED783400EA6AAD /* RingingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E31AE721ED783400EA6AAD /* RingingViewController.swift */; };
 		E7EAC06D21C4BFCB0072822B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAC06C21C4BFCB0072822B /* LoginViewController.swift */; };
 		E7EAC06F21C4C3400072822B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAC06E21C4C3400072822B /* Color.swift */; };
 		E7EB1D2921C8349C007A5811 /* AddKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB1D2821C8349C007A5811 /* AddKeyViewController.swift */; };
-		E7EB1D2B21C834E2007A5811 /* KeysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB1D2A21C834E2007A5811 /* KeysViewController.swift */; };
 		FF543EFC0E605BEEE7FEF65F /* Pods_BLE_Key_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F3F3322A8DA4AEF80E6502 /* Pods_BLE_Key_Finder.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,7 +97,6 @@
 		E747714021D3033900B117E0 /* AlertDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplay.swift; sourceTree = "<group>"; };
 		E752703D21C2264D002DE144 /* BLE Key Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BLE Key Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E752704021C2264D002DE144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E752704221C2264D002DE144 /* KeyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDetailViewController.swift; sourceTree = "<group>"; };
 		E752704521C2264D002DE144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E752704721C2264F002DE144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E752704A21C2264F002DE144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -117,14 +113,12 @@
 		E752707621C22A85002DE144 /* UIViewController+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extras.swift"; sourceTree = "<group>"; };
 		E752707821C22AB8002DE144 /* UITableView+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extras.swift"; sourceTree = "<group>"; };
 		E752707C21C22ED2002DE144 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		E781E62221C8AFCB00638293 /* KeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCell.swift; sourceTree = "<group>"; };
 		E781E62421C8BEB700638293 /* AddKeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeyCell.swift; sourceTree = "<group>"; };
 		E7E31AE521ED706F00EA6AAD /* UITableViewCell+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extras.swift"; sourceTree = "<group>"; };
 		E7E31AE721ED783400EA6AAD /* RingingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingingViewController.swift; sourceTree = "<group>"; };
 		E7EAC06C21C4BFCB0072822B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E7EAC06E21C4C3400072822B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E7EB1D2821C8349C007A5811 /* AddKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeyViewController.swift; sourceTree = "<group>"; };
-		E7EB1D2A21C834E2007A5811 /* KeysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +160,6 @@
 				C4CF636BE2426A35CBF31634 /* Pods-BLE Key FinderUITests.debug.xcconfig */,
 				1104E636988A115EA34F36FB /* Pods-BLE Key FinderUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -302,9 +295,7 @@
 				E781E61F21C8AF8400638293 /* Cells */,
 				E752707B21C22C44002DE144 /* Login */,
 				E752704421C2264D002DE144 /* Main.storyboard */,
-				E7EB1D2A21C834E2007A5811 /* KeysViewController.swift */,
 				E7EB1D2821C8349C007A5811 /* AddKeyViewController.swift */,
-				E752704221C2264D002DE144 /* KeyDetailViewController.swift */,
 				E7E31AE721ED783400EA6AAD /* RingingViewController.swift */,
 			);
 			path = Main;
@@ -345,7 +336,6 @@
 		E781E61F21C8AF8400638293 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E781E62221C8AFCB00638293 /* KeyCell.swift */,
 				E781E62421C8BEB700638293 /* AddKeyCell.swift */,
 			);
 			path = Cells;
@@ -591,10 +581,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E25A58EA22B49974009D638F /* TrackerDataOperation.swift in Sources */,
-				E752704321C2264D002DE144 /* KeyDetailViewController.swift in Sources */,
 				E2A18DF822B4BFE90087D0B4 /* UserManager.swift in Sources */,
 				E7E31AE821ED783400EA6AAD /* RingingViewController.swift in Sources */,
-				E7EB1D2B21C834E2007A5811 /* KeysViewController.swift in Sources */,
 				E7E31AE621ED706F00EA6AAD /* UITableViewCell+Extras.swift in Sources */,
 				A8A4729021E9589400F567A5 /* DeviceTag.m in Sources */,
 				E752707721C22A85002DE144 /* UIViewController+Extras.swift in Sources */,
@@ -612,7 +600,6 @@
 				E752707921C22AB8002DE144 /* UITableView+Extras.swift in Sources */,
 				E2A18DF522B4BB870087D0B4 /* DeviceTag+Ext.swift in Sources */,
 				E752707021C227D7002DE144 /* Log.swift in Sources */,
-				E781E62321C8AFCB00638293 /* KeyCell.swift in Sources */,
 				A8A4729421E9589400F567A5 /* AudioPlayerTool.m in Sources */,
 				E752707221C229DC002DE144 /* Constants.swift in Sources */,
 				E747713C21D1C10C00B117E0 /* LoginOperation.swift in Sources */,

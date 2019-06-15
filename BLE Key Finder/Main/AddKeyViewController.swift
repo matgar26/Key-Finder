@@ -22,7 +22,7 @@ class AddKeyViewController: UIViewController, UITableViewOwner, RingingViewContr
     private let locationManager = CLLocationManager()
     private var didUpdateLocationFirstTime = false
     
-    lazy var ringVC: RingingViewController = { [weak self] in
+    lazy private var ringVC: RingingViewController = { [weak self] in
         let vc = self?.storyboard?.instantiateViewController(withIdentifier: "RingingViewController") as! RingingViewController
         
         vc.providesPresentationContextTransitionStyle = true
@@ -33,19 +33,20 @@ class AddKeyViewController: UIViewController, UITableViewOwner, RingingViewContr
         return vc
     }()
     
-    var didCancelBind = true
+    private var didCancelBind = true
     
-    let delay = DelayOperation(interval: 6)
+    private var delay = DelayOperation(interval: 6)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.standardSetup(owner: self, refreshAction: nil)
+        tableView.standardSetup(owner: self, refreshAction: #selector(scanForTags))
+        tableView.refreshControl?.beginRefreshing()
+        
         manager = DeviceTagManager.sharedInstance()
         manager?.delegate = self
         manager?.reset()
-        manager?.startScan()
-        
         setupKeyUpdates()
+        scanForTags()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,23 +65,22 @@ class AddKeyViewController: UIViewController, UITableViewOwner, RingingViewContr
         appDelegate.logout()
     }
     
-    func ringDevice(index: Int) {
+    private func ringDevice(index: Int) {
         self.present(ringVC, animated: true, completion: nil)
-        manager?.stopScan()
         let device = scannedTags[index]
         didCancelBind = false
-        
         manager?.bind(device, completion: { [weak self] (success, device) in
-            if self?.didCancelBind == true { // If the user pressed the cancel button in the ringVC before the manager could bind the device
+            if self?.didCancelBind == true {
+                // If the user pressed the cancel button in the ringVC before the manager could bind the device
                 self?.endRingAndReset()
             } else {
                 self?.ringVC.didConnectToDevice()
                 device?.device.sendInstruction(.search)
-                
+
                 let completion = BlockOperation {
                     self?.endRingAndReset()
                 }
-                
+
                 if let weakSelf = self {
                     completion.addDependency(weakSelf.delay) // Wait until delayOperation is finished
                     operationQueue.addOperations([weakSelf.delay, completion], waitUntilFinished: false)
@@ -89,9 +89,11 @@ class AddKeyViewController: UIViewController, UITableViewOwner, RingingViewContr
         })
     }
     
-    func endRingAndReset() {
+    private func endRingAndReset() {
+        delay = DelayOperation(interval: 6)
         didCancelBind = true
         self.manager?.reset()
+        scanForTags()
         ringVC.dismiss(animated: true, completion: nil)
         ringVC.resetUI()
     }
@@ -102,6 +104,21 @@ class AddKeyViewController: UIViewController, UITableViewOwner, RingingViewContr
         } else { // If the manager has not yet finished binding
             endRingAndReset()
         }
+    }
+    
+    @objc private func scanForTags() {
+        tableView.refreshControl?.beginRefreshing()
+        manager?.startScan()
+        let refreshDurationDelay = DelayOperation(interval: 20) // Scan for 20 seconds at a time
+        
+        let completion = BlockOperation {
+            self.tableView.refreshControl?.endRefreshing()
+            self.manager?.stopScan()
+        }
+        
+        completion.addDependency(refreshDurationDelay)
+        operationQueue.addOperation(refreshDurationDelay)
+        operationQueue.addOperation(completion)
     }
 }
 
@@ -176,7 +193,6 @@ extension AddKeyViewController: CLLocationManagerDelegate {
         }
         didUpdateLocationFirstTime = true
     }
-    
 }
 
 
