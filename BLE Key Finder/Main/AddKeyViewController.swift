@@ -20,6 +20,7 @@ class AddKeyViewController: UIViewController, UITableViewOwner, RingingViewContr
     private var edit = false
     private var manager: DeviceTagManager?
     private let locationManager = CLLocationManager()
+    private var didUpdateLocationFirstTime = false
     
     lazy var ringVC: RingingViewController = { [weak self] in
         let vc = self?.storyboard?.instantiateViewController(withIdentifier: "RingingViewController") as! RingingViewController
@@ -170,6 +171,10 @@ extension AddKeyViewController: CLLocationManagerDelegate {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         UserManager.shared.currentLatitude = locValue.latitude
         UserManager.shared.currentLongitude = locValue.longitude
+        if !didUpdateLocationFirstTime {
+            updateDevices()
+        }
+        didUpdateLocationFirstTime = true
     }
     
 }
