@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TQ1-Pa-Dwy">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="wuq-Mv-WFj">
+            <objects>
+                <viewController id="TQ1-Pa-Dwy" customClass="LoginViewController" customModule="BLE_Key_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CuZ-QC-o5B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bYJ-WL-e8c">
+                                <rect key="frame" x="40" y="369" width="295" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="vfF-C3-TAi"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad" textContentType="tel"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Lkk-PY-Idj">
+                                <rect key="frame" x="67.666666666666686" y="95" width="240" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="RHd-Kk-RS4"/>
+                                    <constraint firstAttribute="width" constant="240" id="Vrm-Cg-oM9"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bff-nx-mO4">
+                                <rect key="frame" x="120" y="448" width="135" height="42"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="6Em-d6-pUC"/>
+                                    <constraint firstAttribute="height" constant="42" id="8r8-Gu-N2h"/>
+                                    <constraint firstAttribute="width" constant="135" id="eG4-Wl-4kT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="leK-JN-HVn"/>
+                                </constraints>
+                                <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signInTapped:" destination="TQ1-Pa-Dwy" eventType="touchUpInside" id="oZ0-WV-fOZ"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1pc-W2-BHv">
+                                <rect key="frame" x="169" y="450.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23529411764705882" green="0.18823529411764706" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="geQ-46-MFO" firstAttribute="trailing" secondItem="bYJ-WL-e8c" secondAttribute="trailing" constant="40" id="1ej-pT-Zkl"/>
+                            <constraint firstItem="Bff-nx-mO4" firstAttribute="top" secondItem="bYJ-WL-e8c" secondAttribute="bottom" constant="37" id="38J-g6-kZL"/>
+                            <constraint firstItem="1pc-W2-BHv" firstAttribute="centerY" secondItem="Bff-nx-mO4" secondAttribute="centerY" id="6N2-A9-gLS"/>
+                            <constraint firstItem="Lkk-PY-Idj" firstAttribute="centerX" secondItem="CuZ-QC-o5B" secondAttribute="centerX" id="Am7-xh-lsT"/>
+                            <constraint firstItem="bYJ-WL-e8c" firstAttribute="leading" secondItem="geQ-46-MFO" secondAttribute="leading" constant="40" id="K4O-Bj-lZX"/>
+                            <constraint firstItem="1pc-W2-BHv" firstAttribute="centerX" secondItem="Bff-nx-mO4" secondAttribute="centerX" id="P64-SS-B2G"/>
+                            <constraint firstItem="Lkk-PY-Idj" firstAttribute="top" secondItem="geQ-46-MFO" secondAttribute="top" constant="51" id="X9f-HM-72B"/>
+                            <constraint firstItem="bYJ-WL-e8c" firstAttribute="top" secondItem="Lkk-PY-Idj" secondAttribute="bottom" constant="74" id="Y3S-Rt-oik"/>
+                            <constraint firstItem="Bff-nx-mO4" firstAttribute="centerX" secondItem="CuZ-QC-o5B" secondAttribute="centerX" id="qfy-lU-9pm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="geQ-46-MFO"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="1pc-W2-BHv" id="opr-l7-fFH"/>
+                        <outlet property="phoneField" destination="bYJ-WL-e8c" id="Ad1-pj-F2x"/>
+                        <outlet property="signInButton" destination="Bff-nx-mO4" id="ouh-np-uRg"/>
+                        <outlet property="topAnchorConstraint" destination="X9f-HM-72B" id="E3b-io-McE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UR7-R3-awI" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285.60000000000002" y="858.62068965517244"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mainLogo" width="238" height="188"/>
+    </resources>
+</document>
