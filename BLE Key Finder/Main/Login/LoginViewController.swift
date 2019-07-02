@@ -61,8 +61,8 @@ class LoginViewController: UIViewController {
     func signIn() {
         signInButton.isHidden = true
         loadingIndicator.startAnimating()
-        if let phoneInt = Int(phoneField.text ?? "") {
-            let operation = LoginOperation(userNumber: phoneInt) { result in
+        if let phone = phoneField.text {
+            let operation = LoginOperation(userNumber: phone) { result in
                 switch result {
                 case .success(let data):
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate

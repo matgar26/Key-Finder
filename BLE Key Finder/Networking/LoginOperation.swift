@@ -13,17 +13,16 @@ import PSOperations
 open class LoginOperation: PSOperation, ApiOperation {
     
     var completion: ((Swift.Result<AuthenticationInfo, NetworkError>) -> Void)
-    var userNumber: Int
+    var userNumber: String
     
-    public init(userNumber: Int, completion: @escaping ((Swift.Result<AuthenticationInfo, NetworkError>) -> Void)) {
+    public init(userNumber: String, completion: @escaping ((Swift.Result<AuthenticationInfo, NetworkError>) -> Void)) {
         self.completion = completion
-        self.userNumber = userNumber
+        self.userNumber = String(userNumber)
         super.init()
     }
     
     override open func execute() {
-        ApiManager.shared.manager.request(url, method: HTTPMethod.post, parameters: nil, headers: fullHeaders)
-            .validate()
+        ApiManager.shared.manager.request(url, method: HTTPMethod.post, parameters: parameters, encoding: JSONEncoding.default, headers: fullHeaders)
             .responseDecodable { (dataResponse: DataResponse<AuthenticationInfo>) in
                 switch dataResponse.result {
                 case .success(let data):
