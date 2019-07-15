@@ -22,7 +22,7 @@ open class TrackerDataOperation: PSOperation, ApiOperation {
     }
     
     override open func execute() {
-        ApiManager.shared.manager.request(url, method: HTTPMethod.post, parameters: parameters, headers: fullHeaders)
+        ApiManager.shared.manager.request(path, method: HTTPMethod.post, parameters: parameters, headers: fullHeaders)
             .validate()
             .responseDecodable { (dataResponse: DataResponse<AuthenticationInfo>) in
                 switch dataResponse.result {
@@ -34,7 +34,7 @@ open class TrackerDataOperation: PSOperation, ApiOperation {
 //                        Log.services.message("Unsuccessfully Authenticated")
                         self.completion(.failure(NetworkError(title: "Incorrect Phone Number", message: "Please enter a valid phone number", code: dataResponse.response?.statusCode)))
                     }
-                case .failure(let error):
+                case .failure(let _):
 //                    Log.services.error(error)
                     self.completion(.failure(NetworkError(title: "Something went wrong", message: "Please try again", code: dataResponse.response?.statusCode)))
                 }
@@ -43,7 +43,7 @@ open class TrackerDataOperation: PSOperation, ApiOperation {
     }
     
     public var path: String {
-        return "data"
+        return "http://52.226.109.139/echolo/data"
     }
     
     public var parameters: [String : Any] {
