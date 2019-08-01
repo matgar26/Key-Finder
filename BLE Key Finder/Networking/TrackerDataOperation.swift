@@ -22,7 +22,7 @@ open class TrackerDataOperation: PSOperation, ApiOperation {
     }
     
     override open func execute() {
-        ApiManager.shared.manager.request(path, method: HTTPMethod.post, parameters: parameters, headers: fullHeaders)
+        ApiManager.shared.manager.request(path, method: HTTPMethod.post, parameters: parameters, encoding: URLEncoding(destination: .queryString), headers: fullHeaders)
             .validate()
             .responseDecodable { (dataResponse: DataResponse<AuthenticationInfo>) in
                 switch dataResponse.result {
