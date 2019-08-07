@@ -42,6 +42,7 @@
 		E7EAC06D21C4BFCB0072822B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAC06C21C4BFCB0072822B /* LoginViewController.swift */; };
 		E7EAC06F21C4C3400072822B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EAC06E21C4C3400072822B /* Color.swift */; };
 		E7EB1D2921C8349C007A5811 /* AddKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB1D2821C8349C007A5811 /* AddKeyViewController.swift */; };
+		E7FBE03222FB3EAA008CE4D3 /* TrackerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FBE03122FB3EAA008CE4D3 /* TrackerResponse.swift */; };
 		FF543EFC0E605BEEE7FEF65F /* Pods_BLE_Key_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F3F3322A8DA4AEF80E6502 /* Pods_BLE_Key_Finder.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +120,7 @@
 		E7EAC06C21C4BFCB0072822B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E7EAC06E21C4C3400072822B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E7EB1D2821C8349C007A5811 /* AddKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeyViewController.swift; sourceTree = "<group>"; };
+		E7FBE03122FB3EAA008CE4D3 /* TrackerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				E747713E21D1C1BD00B117E0 /* AuthenticationInfo.swift */,
+				E7FBE03122FB3EAA008CE4D3 /* TrackerResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				E747714121D3033900B117E0 /* AlertDisplay.swift in Sources */,
 				E781E62521C8BEB700638293 /* AddKeyCell.swift in Sources */,
 				A8A4729121E9589400F567A5 /* DeviceTagManager.m in Sources */,
+				E7FBE03222FB3EAA008CE4D3 /* TrackerResponse.swift in Sources */,
 				A8A4729221E9589400F567A5 /* MinewDevice+Extras.swift in Sources */,
 				A8A4729521E9589400F567A5 /* DeviceValue.swift in Sources */,
 				E752707521C22A64002DE144 /* Optional+Extras.swift in Sources */,

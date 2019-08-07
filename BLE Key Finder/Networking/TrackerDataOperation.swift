@@ -12,29 +12,23 @@ import PSOperations
 
 open class TrackerDataOperation: PSOperation, ApiOperation {
     
-    var completion: ((Swift.Result<AuthenticationInfo, NetworkError>) -> Void)
+    var completion: ((Swift.Result<Any?, NetworkError>) -> Void)
     var nodes: [[String: Any]]
     
-    public init(devices: [DeviceTag], completion: @escaping ((Swift.Result<AuthenticationInfo, NetworkError>) -> Void)) {
+    public init(devices: [DeviceTag], completion: @escaping ((Swift.Result<Any?, NetworkError>) -> Void)) {
         self.completion = completion
         self.nodes = devices.map({ $0.deviceTagParameters() })
         super.init()
     }
     
     override open func execute() {
-        ApiManager.shared.manager.request(path, method: HTTPMethod.post, parameters: parameters, encoding: URLEncoding(destination: .queryString), headers: fullHeaders)
+        ApiManager.shared.manager.request(path, method: HTTPMethod.post, parameters: parameters, encoding: JSONEncoding.default, headers: fullHeaders)
             .validate()
-            .responseDecodable { (dataResponse: DataResponse<AuthenticationInfo>) in
+            .responseJSON { (dataResponse: DataResponse<Any>) in
                 switch dataResponse.result {
-                case .success(let data):
-                    if let _ = data.hubId {
-//                        Log.services.message("Successfully Authenticated")
-                        self.completion(.success(data))
-                    } else {
-//                        Log.services.message("Unsuccessfully Authenticated")
-                        self.completion(.failure(NetworkError(title: "Incorrect Phone Number", message: "Please enter a valid phone number", code: dataResponse.response?.statusCode)))
-                    }
-                case .failure(let _):
+                case .success( _):
+                    self.completion(.success(nil))
+                case .failure( _):
 //                    Log.services.error(error)
                     self.completion(.failure(NetworkError(title: "Something went wrong", message: "Please try again", code: dataResponse.response?.statusCode)))
                 }
