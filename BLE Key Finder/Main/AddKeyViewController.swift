@@ -125,6 +125,7 @@ class AddKeyViewController: UIViewController, UITableViewOwner, RingingViewContr
 extension AddKeyViewController: DeviceTagManagerDelegate {
     func didManagerScanTags(_ tags: [DeviceTag]!) {
         scannedTags = tags
+        updateDevices()
         tableView.reloadData()
     }
 }
