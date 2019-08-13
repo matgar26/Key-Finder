@@ -20,6 +20,10 @@ extension MinewDevice {
         return self.getValue(value)?.stringValue ?? ""
     }
     
+    func intValueFor(_ value: ValueIndex) -> Int {
+        return self.getValue(value)?.intValue ?? 0
+    }
+    
     var distance: String? {
         let distance = self.getValue(.distance)?.floatValue ?? nil
         if distance != nil {
@@ -48,6 +52,10 @@ extension DeviceTag {
 
     func stringValueFor(_ value: ValueIndex) -> String {
         return device.getValue(value)?.stringValue ?? ""
+    }
+    
+    func intValueFor(_ value: ValueIndex) -> Int {
+        return device.getValue(value)?.intValue ?? 0
     }
     
     var distance: String? {

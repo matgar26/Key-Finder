@@ -13,9 +13,9 @@ extension DeviceTag {
         return [
             "macAddress": device.stringValueFor(.macAddress),
             "nodeId": device.stringValueFor(.deviceId),
-            "rssi": device.stringValueFor(.rssi),
-            "distance": device.stringValueFor(.distance),
-            "battery": device.stringValueFor(.battery),
+            "rssi": device.intValueFor(.rssi),
+            "distance": device.intValueFor(.distance),
+            "battery": device.intValueFor(.battery),
             "name": device.stringValueFor(.name)
         ]
     }
